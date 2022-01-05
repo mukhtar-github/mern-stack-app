@@ -28,30 +28,11 @@ Our Server will interact with the database using the native Mongodb Javascript l
 
 I will show you how to replace the *Node-Express* backend with *Mongodb Realm*. This is a serverless platform that will allow us to do everything in the cloud without running our own server, and with a lot less code. Then I'll show you how we can use *Mongodb Realm* to host our React front-end, so our entire web app will be hosted for free on *Mongodb Realm*. If you already know a lot about the *Mern Stack*, just skip and go straight to where I show how to convert the *Node-Express* backend to use *Mongodb Realm* instead.
 
-Let me show you an overview of the structure of the app we're going to build. Over on this side we have the *M* of the *Mern Stack -- Mongodb*. We'll be hosting this on Mongodb Atlas. We also, and then we have the *E* and the *N* this is the backend *Node and Express*. You'll see that *Express* is just part of *Node*, and this is where we're going to be running the our backend serveR. And then we have our *R* for *React front-end*. And we'll be running our React on a local server too, inside Node.js.
-
-And then the client so
-02:33
-this is what people will see when they
-02:35
-go to the website
-02:36
-to our web app so let's start by talking
-02:38
-about mongodb
+Let me show you an overview of the structure of the app we're going to build. Over on this side we have the *M* of the *Mern Stack -- Mongodb*. We'll be hosting this on Mongodb Atlas. We also, and then we have the *E* and the *N* this is the backend *Node and Express*. You'll see that *Express* is just part of *Node*, and this is where we're going to be running the our backend server. And then we have our *R* for *React -- front-end*. And we'll be running our *React* on a local server too, inside *Node.js*. And then the Client, which is what people will see when they go to the website, to our web app. So let's start by talking about *Mongodb*.
 
 ## MongoDB overview
 
-02:43
-first a quick overview of the mongodb
-02:45
-database
-02:47
-in the tabular or relational world we
-02:49
-think of things like databases
-02:51
-tables rows etc mongodb has similar
+First a quick overview of the *Mongodb database*. In the tabular or relational world, we think of things like databases tables rows etc mongodb has similar
 02:54
 concepts that use different terms
 02:55
