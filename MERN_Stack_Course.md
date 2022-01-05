@@ -22,7 +22,7 @@
 
 Hi i'm Beau Carnes with freecodecamp.org. In this course i'm going to teach you how to make a *full stack web application* using the *Mern Stack*. But I'm going to teach you even more than other *Mern Stack* courses, I'm going to show you how to convert the Back-end of the app to Serverless, and how to host it for free in the cloud, so you don't even need *Node or Express*.
 
-The *Mern Stack* is a popular stack of technologies for building a *modern single page application*. Mongodb is a document based open source database. Node.js allows javascript to run outside a browser in places like a web server. Express is a web application framework that makes it simpler to code a web server in javascript. And React is a Javascript front-end library for building user interfaces.
+The *Mern Stack* is a popular stack of technologies for building a *modern single page application*. *Mongodb* is a *document based open source database*. *Node.js* allows Javascript to run outside a browser in places like a web server. *Express* is a web application framework that makes it simpler to code a web server in javascript. And *React* is a Javascript front-end library for building *user interfaces*.
 
 In this course we will be building a
 00:49
