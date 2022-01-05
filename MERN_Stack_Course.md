@@ -32,29 +32,7 @@ Let me show you an overview of the structure of the app we're going to build. Ov
 
 ## MongoDB overview
 
-First a quick overview of the *Mongodb database*. In the tabular or relational world, we think of things like databases tables rows etc mongodb has similar
-02:54
-concepts that use different terms
-02:55
-i'd like to make sure everyone is aware
-02:57
-of instead of a table we have
-02:58
-collections
-02:59
-instead of rows we have documents we can
-03:01
-do join operations with the lookup
-03:03
-operator
-03:04
-and instead of foreign keys we utilize
-03:06
-references mongodb is very well suited
-03:08
-for handling data with a wide variety of
-03:10
-relationships
+First, a quick overview of the *Mongodb database*. In the tabular or relational world, we think of things like databases, tables, rows, etc. *Mongodb* has similar concepts that use different terms. I'd like to make sure everyone is aware of, instead of a *Table*, we have *Collections*, instead of *Rows* we have *Documents*. We can do *join* operations with the *$lookup* operator. And instead of *foreign keys*, we utilize *references*. *Mongodb* is very well suited for handling data with a wide variety of relationships.
 03:12
 let's have a quick look at the document
 03:13
