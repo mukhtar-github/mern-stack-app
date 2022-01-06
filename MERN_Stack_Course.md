@@ -57,41 +57,5 @@ We can see in here a variety of relationships an *address*, a *title*. Here's th
 
 You can host your Mongodb database locally, but I found that it's easier to host the database using  *Mongodb Atlas*, so we can do everything in the cloud and eventually we will literally do everything in the cloud. Where our entire back-end and front-end is in the cloud. And we can actually do it right all on *Mongodb Atlas*. But for now we're just going to create the database. We'll be using the *free tier on Mongodb Atlas* in this tutorial.
 
-So the first step is to create an account or you can just sign in so once you're creating your account for the first time you're going to have to set up the account so you can create an organization everything's going to have to have an organization i'll just call bose org
-04:34
-for the project name for our first
-04:36
-project i'm going to put
-04:37
-mern stack so i'm going to
-04:40
-call this the mirnstack project and
-04:43
-preferred language
-04:45
-well we'll be mainly working with
-04:47
-javascript and the mern stack
-04:48
-so let's go past this
-04:53
-and then i'm going to choose this free
-04:55
-tier
-04:57
-okay now we're going to be choosing
-04:59
-where our
-05:01
-our files are going to be stored at and
-05:04
-we can just
-05:04
-basically choose all these default
-05:07
-options if we
-05:08
-choose these default options it's going
-05:09
-to be on the free tier
+So the first step is to create an account or you can just sign in so once you're creating your account for the first time you're going to have to set up the account so you can create an organization everything's going to have to have an organization i'll just call bose org for the project name for our first project i'm going to put mern stack so i'm going to call this the mirnstack project and preferred language well we'll be mainly working with javascript and the mern stack so let's go past this and then i'm going to choose this free tier okay now we're going to be choosing where our our files are going to be stored at and we can just basically choose all these default options if we choose these default options it's going to be on the free tier
 05:11
