@@ -55,52 +55,9 @@ We can see in here a variety of relationships an *address*, a *title*. Here's th
 
 ## Setup MongoDB Atlas Cloud Database
 
-03:52
-you can host your mongodb database
-03:54
-locally but i found that it's easier to
-03:56
-host the database using mongodb
-03:58
-atlas so we can do everything in the
-04:00
-cloud and eventually
-04:02
-we will literally do everything in the
-04:04
-cloud
-04:05
-where our entire back end and front end
-04:08
-is in the cloud
-04:09
-and we can actually do it right all on
-04:11
-mongodb atlas
-04:13
-but for now we're just going to create
-04:14
-the database we'll be using the free
-04:17
-tier on mongodb
-04:18
-atlas in this tutorial so the first step
-04:20
-is to create an account
-04:22
-or you can just sign in so once you're
-04:24
-creating your account for the first time
-04:26
-you're going to have to set up the
-04:27
-account so you can create an
-04:29
-organization
-04:30
-everything's going to have to have an
-04:32
-organization i'll just call bose org
+You can host your Mongodb database locally, but I found that it's easier to host the database using  *Mongodb Atlas*, so we can do everything in the cloud and eventually we will literally do everything in the cloud. Where our entire back-end and front-end is in the cloud. And we can actually do it right all on *Mongodb Atlas*. But for now we're just going to create the database. We'll be using the *free tier on Mongodb Atlas* in this tutorial.
+
+So the first step is to create an account or you can just sign in so once you're creating your account for the first time you're going to have to set up the account so you can create an organization everything's going to have to have an organization i'll just call bose org
 04:34
 for the project name for our first
 04:36
