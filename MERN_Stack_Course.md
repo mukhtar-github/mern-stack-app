@@ -33,24 +33,124 @@ Let me show you an overview of the structure of the app we're going to build. Ov
 ## MongoDB overview
 
 First, a quick overview of the *Mongodb database*. In the tabular or relational world, we think of things like databases, tables, rows, etc. *Mongodb* has similar concepts that use different terms. I'd like to make sure everyone is aware of, instead of a *Table*, we have *Collections*, instead of *Rows* we have *Documents*. We can do *join* operations with the *$lookup* operator. And instead of *foreign keys*, we utilize *references*. *Mongodb* is very well suited for handling data with a wide variety of relationships.
-03:12
-let's have a quick look at the document
-03:13
-model to see
-03:15
-here's an example of a mongodb document
-03:18
-it looks very much like json
-03:20
-we can see in here a variety of
-03:22
-relationships an address a title
-03:24
-here's the different data formats
-03:26
-they're all in the document
-03:27
-mongodb stores data in bson format or
-03:31
-binary json
-03:32
+
+Let's have a quick look at the *document model* to see. Here's an example of a *Mongodb document*. It looks very much like *Json*.
+
+```javascript
+{
+    name: "Mukhtar",
+    title: "Developer",
+    address: {
+        addres 1: "123 Main Street",
+        city: "Kano",
+        postal_code: "90112"
+    },
+    projects: "VimApp",
+    employee_number: 5,
+    location: [1.234, 56.789]
+    }
+```
+
+We can see in here a variety of relationships an address a title here's the different data formats they're all in the document mongodb stores data in bson format or binary json this provides for a wide variety of
+03:34
+support for data types like strings or
+03:36
+integers
+03:37
+and in our code we're sometimes going to
+03:39
+have to do some converting between
+03:41
+json and binary json specifically for
+03:44
+the object id
+03:46
+okay let's get started creating our
+03:47
+database
+
+## Setup MongoDB Atlas Cloud Database
+
+03:52
+you can host your mongodb database
+03:54
+locally but i found that it's easier to
+03:56
+host the database using mongodb
+03:58
+atlas so we can do everything in the
+04:00
+cloud and eventually
+04:02
+we will literally do everything in the
+04:04
+cloud
+04:05
+where our entire back end and front end
+04:08
+is in the cloud
+04:09
+and we can actually do it right all on
+04:11
+mongodb atlas
+04:13
+but for now we're just going to create
+04:14
+the database we'll be using the free
+04:17
+tier on mongodb
+04:18
+atlas in this tutorial so the first step
+04:20
+is to create an account
+04:22
+or you can just sign in so once you're
+04:24
+creating your account for the first time
+04:26
+you're going to have to set up the
+04:27
+account so you can create an
+04:29
+organization
+04:30
+everything's going to have to have an
+04:32
+organization i'll just call bose org
+04:34
+for the project name for our first
+04:36
+project i'm going to put
+04:37
+mern stack so i'm going to
+04:40
+call this the mirnstack project and
+04:43
+preferred language
+04:45
+well we'll be mainly working with
+04:47
+javascript and the mern stack
+04:48
+so let's go past this
+04:53
+and then i'm going to choose this free
+04:55
+tier
+04:57
+okay now we're going to be choosing
+04:59
+where our
+05:01
+our files are going to be stored at and
+05:04
+we can just
+05:04
+basically choose all these default
+05:07
+options if we
+05:08
+choose these default options it's going
+05:09
+to be on the free tier
+05:11
