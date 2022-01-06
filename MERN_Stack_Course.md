@@ -69,5 +69,7 @@ Now eventually, we'll have to come back and copy this, but for now we'll just le
 
 ## Load Sample Data into Database
 
-And now we'll add sample data to the database one thing great about mongodb atlas is that when you're doing when you're creating a demo app or you're just trying to try things out there's a lot of sample data you can just use so you don't have to do all this work of finding your own sample data so i'm going to click these three dots here and go to load sample data set and then load sample data set and this is actually going to create a bunch of different data sets right within our cluster okay after the sample data set is successfully loaded we can actually use this interface to explore the data status and see what's in it so i'm going to click on collections and then these are all the different data sets are in here there's sample airbnb
+And now we'll add *sample data* to the database. One thing great about *Mongodb Atlas* is that, when you're creating a *demo app* or you're just trying to try things out, there's a lot of *sample data* you can just use so you don't have to do all this work of finding your own *sample data*. So I'm going to click these three dots here and go to load *sample data set*, and then load *sample data set*. And this is actually going to create a bunch of different data sets right within our cluster.
+
+Okay after the *sample data* set is successfully loaded we can actually use this interface to explore the data status and see what's in it so i'm going to click on collections and then these are all the different data sets are in here there's sample airbnb
 07:35
