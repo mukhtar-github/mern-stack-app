@@ -45,29 +45,13 @@ Let's have a quick look at the *document model* to see. Here's an example of a *
         city: "Kano",
         postal_code: "90112"
     },
-    projects: "VimApp",
+    projects: ["VimApp", "KasApp"],
     employee_number: 5,
     location: [1.234, 56.789]
     }
 ```
 
-We can see in here a variety of relationships an address a title here's the different data formats they're all in the document mongodb stores data in bson format or binary json this provides for a wide variety of
-03:34
-support for data types like strings or
-03:36
-integers
-03:37
-and in our code we're sometimes going to
-03:39
-have to do some converting between
-03:41
-json and binary json specifically for
-03:44
-the object id
-03:46
-okay let's get started creating our
-03:47
-database
+We can see in here a variety of relationships an *address*, a *title*. Here's the different *data formats* -- we've *string*, *nested document*, *array*, *integer*, and *geo-spatial coordinates*, they're all in the document. Mongodb stores data in *bson format* or *binary json*. This provides for a wide variety of support for data types like *strings or integers*, and in our code we're sometimes going to have to do some converting between *json and binary json*, specifically for the *object id*. Okay let's get started creating our *database*.
 
 ## Setup MongoDB Atlas Cloud Database
 
