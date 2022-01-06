@@ -63,7 +63,9 @@ And then I'm going to choose this *free-tier*. Okay now we're going to be choosi
 
 I'll just keep on the default, and then I'll just do create *cluster*. And you can update the settings depending on what you need, you can actually pay more if you need a bigger *cluster*, but for now when we're just learning it's good to start with the free-version. Okay after the *cluster* is created, you'll have to configure it, so you can connect to it. So click the connect button, and then we're going to have to have a *white-list Ip*, so just add the *current Ip address*.
 
-So we'll be connecting to it right from our computer because we're developing the back end locally so i'll just add my current ip address and then we'll create a database user so i'll just create it as my name and the password is mernstack we'll choose a connection method and we'll be connecting through mongodb's native drivers so this is going to give us the connection string we're going to use to connect from uh from mongodb and node.js now eventually we'll have to come back and copy this but for now we'll just leave it and we'll come back and get this when it's time when we're doing our code in node.js and i can just close this for now
+So, we'll be connecting to it right from our computer, because we're developing the back-end locally, so I'll just add my *current ip address*. And then we'll create a *database user*. So I'll just create it as *my name*, and the password is *mernstack*. We'll choose a connection method, and we'll be connecting through *Mongodb's native drivers*, so this is going to give us the *connection string* we're going to use to connect from *Mongodb and Node.js*.
+
+Now eventually, we'll have to come back and copy this, but for now we'll just leave it, and we'll come back and get this when it's time. When we're doing our code in Node.js and I can just close this for now.
 
 ## Load Sample Data into Database
 
