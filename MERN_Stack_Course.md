@@ -71,5 +71,138 @@ Now eventually, we'll have to come back and copy this, but for now we'll just le
 
 And now we'll add *sample data* to the database. One thing great about *Mongodb Atlas* is that, when you're creating a *demo app* or you're just trying to try things out, there's a lot of *sample data* you can just use so you don't have to do all this work of finding your own *sample data*. So I'm going to click these three dots here and go to load *sample data set*, and then load *sample data set*. And this is actually going to create a bunch of different data sets right within our cluster.
 
-Okay after the *sample data* set is successfully loaded we can actually use this interface to explore the data status and see what's in it so i'm going to click on collections and then these are all the different data sets are in here there's sample airbnb
-07:35
+Okay after the *sample data* set is successfully loaded, we can actually use this interface to explore the data sets and see what's in it, so I'm going to click on *collections*. And then these are all the different data sets that are in here. There's *sample_airbnb, sample_analytics, geospatial, mflix, restaurants, supplies, training and weather-data*. For this tutorial we're going to be using the *sample_restaurants* data, and you can see there's the *neighborhoods* data and there's the *restaurants* data.
+
+And if we look at the *restaurants*, we have a list of a bunch of restaurants in new york
+07:56
+so this one's called the riviera carrer
+08:00
+i guess i don't know how to pronounce it
+08:01
+uh so it's gonna show the cuisine and
+08:03
+the burrow
+08:04
+and then there's also going to be an
+08:06
+address for each restaurant
+08:08
+so we are going to be using this data in
+08:11
+our app
+08:12
+so let's start creating our app we're 
+
+## Create Node / Express Backend
+
+08:14
+going to start creating our back-ends
+08:19
+so i'm going to go over to the terminal
+08:20
+here i've already created a folder
+08:23
+called
+08:23
+restaurant reviews and i'm going to just
+08:27
+make sure i have the right version of
+08:28
+node
+08:30
+and so that's going to be a good version
+08:33
+12.18.0
+08:35
+and now we are going to first start with
+08:38
+our
+08:38
+back end we're going to start by
+08:40
+creating the back end of the app with
+08:42
+nodejs and express
+08:44
+and then we'll create the front end with
+08:45
+react and then like i said in the final
+08:48
+section we'll switch out the node.js
+08:50
+express backend with mongodb realm
+08:53
+so inside this root folder i'm going to
+08:55
+create a new folder called backend
+09:01
+and then i'll switch into it
+09:04
+okay now that i'm in this folder i'm
+09:08
+going to
+09:08
+we're going to create a package.json
+09:10
+file inside this folder by running
+09:13
+npm init
+09:16
+and then okay we've initiated our
+09:19
+package.json file since we're going to
+09:21
+be using
+09:22
+node here and now we're going to install
+09:24
+a few dependencies
+09:26
+so we'll do npm install we're going to
+09:28
+do express
+09:32
+cores mongodb and dot
+09:35
+env so let me tell you a little bit
+09:38
+about these
+09:39
+so express is going to be what we use
+09:42
+for
+09:43
+the the web server it's going to help us
+09:44
+make the web server
+09:46
+cores stands for cross-origin resource
+09:49
+sharing
+09:50
+and it allows ajax requests to skip the
+09:52
+same origin policy and access
+09:54
+resources from remote hosts the course
+09:57
+package provides an express middleware
+09:59
+that can enable cores with different
+10:01
+options
+10:02
+basically it's going to make it so we
+10:04
+can make the right connections on our
+10:06
+network that we need to make without
+10:07
+that we could have some errors
+10:09
+and then the mongodb dependency allows
+10:11
+us to interact with our mongodb database
+10:14
+the emv dependency loads environmental
+10:16
