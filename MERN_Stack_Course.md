@@ -71,32 +71,12 @@ Now eventually, we'll have to come back and copy this, but for now we'll just le
 
 And now we'll add *sample data* to the database. One thing great about *Mongodb Atlas* is that, when you're creating a *demo app* or you're just trying to try things out, there's a lot of *sample data* you can just use so you don't have to do all this work of finding your own *sample data*. So I'm going to click these three dots here and go to load *sample data set*, and then load *sample data set*. And this is actually going to create a bunch of different data sets right within our cluster.
 
-Okay after the *sample data* set is successfully loaded, we can actually use this interface to explore the data sets and see what's in it, so I'm going to click on *collections*. And then these are all the different data sets that are in here. There's *sample_airbnb, sample_analytics, geospatial, mflix, restaurants, supplies, training and weather-data*. For this tutorial we're going to be using the *sample_restaurants* data, and you can see there's the *neighborhoods* data and there's the *restaurants* data.
+Okay after the *sample data* set is successfully loaded, we can actually use this interface to explore the data sets and see what's in it. So I'm going to click on *collections*, and then these are all the different data sets that are in here. There's *sample_airbnb, sample_analytics, geospatial, mflix, restaurants, supplies, training and weather-data*. For this tutorial we're going to be using the *sample_restaurants* data, and you can see there's the *neighborhoods* data and there's the *restaurants* data.
 
-And if we look at the *restaurants*, we have a list of a bunch of restaurants in new york
-07:56
-so this one's called the riviera carrer
-08:00
-i guess i don't know how to pronounce it
-08:01
-uh so it's gonna show the cuisine and
-08:03
-the burrow
-08:04
-and then there's also going to be an
-08:06
-address for each restaurant
-08:08
-so we are going to be using this data in
-08:11
-our app
-08:12
-so let's start creating our app we're 
+And if we look at the *restaurants*, we have a list of a bunch of *restaurants* in new york. So this one's called the riviera carrer, I guess I don't know how to pronounce it. So it's gonna show the *cuisine* and the *burrow*, and then there's also going to be an *address* for each *restaurant*. So we are going to be using this data in our app so let's start creating our app. We're going to start creating our *back-ends*.
 
 ## Create Node / Express Backend
 
-08:14
-going to start creating our back-ends
 08:19
 so i'm going to go over to the terminal
 08:20
