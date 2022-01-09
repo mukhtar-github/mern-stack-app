@@ -1,6 +1,6 @@
-let vehicles
+let restaurants
 
-export default class VehiclesDAO {
+export default class RestaurantsDAO {
     static async injectDB(conn) {
         if (vehicles) {
             return
