@@ -1,7 +1,7 @@
 import app from "./server.js"
 import mongodb from "mongodb"
 import dotenv from "dotenv"
-import VehiclesDAO from "./dao/vehiclesDAO.js"
+//import VehiclesDAO from "./dao/vehiclesDAO.js"
 dotenv.config()
 
 const MongoClient = mongodb.MongoClient
