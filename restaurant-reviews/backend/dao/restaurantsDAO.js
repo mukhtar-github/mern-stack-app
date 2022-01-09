@@ -6,7 +6,7 @@ export default class RestaurantsDAO {
             return
         }
         try {
-            restaurants = await conn.db(process.env.VIMAPP_NS).collection("restaurants")
+            restaurants = await conn.db(process.env.RESTREVIEWS_NS).collection("restaurants")
         } catch (e) {
             console.error(
                 `Unable to establish a collection handle in restaurantsDAO: ${e}`
