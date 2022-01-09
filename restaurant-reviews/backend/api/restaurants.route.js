@@ -4,7 +4,7 @@ import express from "express"
 
 const router = express.Router()
 
-router.route("/api/v1/restaurants/").get((req, res) => res.send("Hello World"))
+router.route("/").get((req, res) => res.send("Hello World"))
 
 /*
 router.route("/").get(VehiclesCtrl.apiGetVehicles)
@@ -16,4 +16,4 @@ router
     .delete(VehiclesInfoCtrl.apiDeleteVehicleInfo)
 */
 
-export default route
+export default router

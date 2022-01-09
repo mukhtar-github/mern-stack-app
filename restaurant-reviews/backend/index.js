@@ -19,7 +19,7 @@ MongoClient.connect(
         process.exit(1)
 })
 .then(async client => {
-        await VehiclesDAO.injectDB(client)
+        //await VehiclesDAO.injectDB(client)
         app.listen(port, () => {
                 console.log(`listening on port ${port}`)
         })

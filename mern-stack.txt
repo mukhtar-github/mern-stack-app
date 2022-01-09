@@ -16,9 +16,4 @@ uri -- mongodb+srv://m001-student:<password>@cluster0.dkemg.mongodb.net/
 myFirstDatabase?retryWrites=true&w=majority
 **
 
-RESTREVIEWS_DB_URI=mongodb+srv://m001-student:m001-mongodb-basics@cluster0.dkemg.mongodb.net/sample_restaurants?retryWrites=true&w=majority
-RESTREVIEWS_NS=sample_restaurants
-PORT=4000
-
-"main": "index.js",
-"type": "module",
+http://localhost:4000/api/v1/restaurants //output - Hello World
