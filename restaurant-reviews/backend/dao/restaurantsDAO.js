@@ -2,22 +2,22 @@ let restaurants
 
 export default class RestaurantsDAO {
     static async injectDB(conn) {
-        if (vehicles) {
+        if (restaurants) {
             return
         }
         try {
-            vehicles = await conn.db(process.env.VIMAPP_NS).collection("vehicles")
+            restaurants = await conn.db(process.env.VIMAPP_NS).collection("restaurants")
         } catch (e) {
             console.error(
-                `Unable to establish a collection handle in vehiclesDAO: ${e}`
+                `Unable to establish a collection handle in restaurantsDAO: ${e}`
             )
         }
     }
 
-    static async getVehicles({
+    static async getRestaurants({
         filters = null,
         page = 0,
-        vehiclesPerPage = 20
+        restaurantsPerPage = 20
     } = {}) {
         let query
         if (filters) {
