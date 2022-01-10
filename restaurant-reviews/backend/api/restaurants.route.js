@@ -1,10 +1,10 @@
 import express from "express"
-//import VehiclesCtrl from "./vehicles.controller.js"
+import RestaurantsCtrl from "./restaurants.controller.js"
 //import VehiclesInfoCtrl from "./vehicles_info.controller.js"
 
 const router = express.Router()
 
-router.route("/").get((req, res) => res.send("Hello World"))
+router.route("/").get(RestaurantsCtrl.apiGetRestaurants)
 
 /*
 router.route("/").get(VehiclesCtrl.apiGetVehicles)

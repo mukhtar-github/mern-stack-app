@@ -1,7 +1,7 @@
-import RestaurantsDAO from "../dao/vehiclesDAO.js"
+import RestaurantsDAO from "../dao/restaurantsDAO.js"
 
-export default class VehiclesController {
-    static async apiGetVehicles(req, res, next) {
+export default class RestaurantsController {
+    static async apiGetRestaurants(req, res, next) {
         const vehiclesPerPage = req.query.vehiclesPerPage ? parseInt(req.query.vehiclesPerPage, 10) : 20
         const page = req.query.page ? parseInt(req.query.page, 10) : 0
 
