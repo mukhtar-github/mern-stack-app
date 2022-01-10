@@ -2,7 +2,7 @@ import RestaurantsDAO from "../dao/restaurantsDAO.js"
 
 export default class RestaurantsController {
     static async apiGetRestaurants(req, res, next) {
-        const vehiclesPerPage = req.query.vehiclesPerPage ? parseInt(req.query.vehiclesPerPage, 10) : 20
+        const restaurantsPerPage = req.query.restaurantsPerPage ? parseInt(req.query.restaurantsPerPage, 10) : 20
         const page = req.query.page ? parseInt(req.query.page, 10) : 0
 
         let filters = {}
@@ -14,18 +14,18 @@ export default class RestaurantsController {
             filters.vehicle_id = req.query.vehicle_id
         }
 
-        const { vehiclesList, totalNumVehicles } = await VehiclesDAO.getVehicles({
+        const { restaurantsList, totalNumRestaurants } = await RestaurantsDAO.getrestaurants({
             filters,
             page,
-            vehiclesPerPage
+            restaurantsPerPage
         })
 
         let response = {
-            vehicles: vehiclesList,
+            restaurants: restaurantsList,
             page: page,
             filters: filters,
-            entries_per_page: vehiclesPerPage,
-            total_results: totalNumVehicles
+            entries_per_page: restaurantsPerPage,
+            total_results: totalNumrestaurants
         }
         res.json(response)
     }
