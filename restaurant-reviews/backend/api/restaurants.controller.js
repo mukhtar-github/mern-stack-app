@@ -6,10 +6,10 @@ export default class RestaurantsController {
         const page = req.query.page ? parseInt(req.query.page, 10) : 0
 
         let filters = {}
-        if (req.query.model) {
-            filters.model = req.query.model
-        } else if (req.query.attached_to) {
-            filters.attached_to = req.query.attached_to
+        if (req.query.cuisine) {
+            filters.cuisine = req.query.cuisine
+        } else if (req.query.zipcode) {
+            filters.zipcode = req.query.zipcode
         } else if (req.query.vehicle_id) {
             filters.vehicle_id = req.query.vehicle_id
         }
