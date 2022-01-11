@@ -16,4 +16,17 @@ uri -- mongodb+srv://m001-student:<password>@cluster0.dkemg.mongodb.net/
 myFirstDatabase?retryWrites=true&w=majority
 **
 
+**Testing my server/api**
+Start nodemon server
+Open another terminal and run:
+curl -v http://localhost:4000/api/v1/restaurants | json
+curl http://localhost:4000/api/v1/restaurants
+curl -i -H "Accept: application/json" 'http://localhost:4000/api/v1/restaurants'
+-To save to file: curl -o out.json <https://localhost:000/api/v1/vehicles/index.html>
+curl -v <http://localhost:5000/api/v1/vehicles?vehicle_id=23-FGN-730> | json
+
+-Background running server: sudo ps aux | grep -i nodemon
+sudo kill -9 process_id
+sudo kill -9 21793
+
 http://localhost:4000/api/v1/restaurants //output - Hello World
