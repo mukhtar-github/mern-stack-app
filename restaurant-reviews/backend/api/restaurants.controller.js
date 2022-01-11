@@ -10,8 +10,8 @@ export default class RestaurantsController {
             filters.cuisine = req.query.cuisine
         } else if (req.query.zipcode) {
             filters.zipcode = req.query.zipcode
-        } else if (req.query.vehicle_id) {
-            filters.vehicle_id = req.query.vehicle_id
+        } else if (req.query.name) {
+            filters.name = req.query.name
         }
 
         const { restaurantsList, totalNumRestaurants } = await RestaurantsDAO.getrestaurants({
