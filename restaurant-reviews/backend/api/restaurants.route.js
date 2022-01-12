@@ -1,6 +1,6 @@
 import express from "express"
 import RestaurantsCtrl from "./restaurants.controller.js"
-//import VehiclesInfoCtrl from "./vehicles_info.controller.js"
+import ReviewsCtrl from "./reviews.controller.js"
 
 const router = express.Router()
 
