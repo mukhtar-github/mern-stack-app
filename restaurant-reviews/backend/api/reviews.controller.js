@@ -11,7 +11,7 @@ export default class ReviewsController {
             }
             const date = new Date()
 
-            const ReviewResponse = await ReviewsDAO.addReview(
+            const reviewResponse = await ReviewsDAO.addReview(
                 restaurantId,
                 userInfo,
                 review,
@@ -53,14 +53,13 @@ export default class ReviewsController {
         }
     }
 
-    static async apiDeleteVehicleInfo(req, res, next) {
+    static async apiDeleteReview(req, res, next) {
         try {
-            const vehicleInfoId = req.query.id
+            const reviewId = req.query.id
             const userId = req.body.user_id
-            console.log(vehicleInfoId)
-
-            const vehicleInfoResponse = await VehiclesInfoDAO.deleteVehicleInfo(
-                vehicleInfoId,
+            console.log(reviewId)
+            const reviewResponse = await ReviewsDAO.deleteReview(
+                reviewId,
                 userId
             )
             res.json({ status: "Success"})
