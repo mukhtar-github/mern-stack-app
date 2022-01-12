@@ -6,14 +6,10 @@ const router = express.Router()
 
 router.route("/").get(RestaurantsCtrl.apiGetRestaurants)
 
-/*
-router.route("/").get(VehiclesCtrl.apiGetVehicles)
-
 router
-    .route("/vehicles_info")
-    .post(VehiclesInfoCtrl.apiPostVehicleInfo)
-    .put(VehiclesInfoCtrl.apiUpdateVehicleInfo)
-    .delete(VehiclesInfoCtrl.apiDeleteVehicleInfo)
-*/
+    .route("/review")
+    .post(ReviewsCtrl.apiPostReview)
+    .put(ReviewsCtrl.apiUpdateReview)
+    .delete(ReviewsCtrl.apiDeleteReview)
 
 export default router
