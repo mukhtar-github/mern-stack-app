@@ -1,32 +1,20 @@
-import VehiclesInfoDAO from "../dao/vehicles_infoDAO.js"
+import ReviewsDAO from "../dao/reviewsDAO.js"
 
-export default class VehicleInfoController {
-    static async apiPostVehicleInfo(req, res, next) {
+export default class ReviewsController {
+    static async apiPostReview(req, res, next) {
         try {
-            const vehicleId = req.body.vehicle_id
-            const vehicleInfo = {
-                year: req.body.year,
-                model: req.body.model,
-                chassis: req.body.chassis,
-                tyre_size: req.body.tyre_size,
-                attached_to: req.body.attached_to,
-                accident_history: req.body.accident_history,
-                insured_by: req.body.insured_by,
-                insurance_id: req.body.insurance_id,
-                insurance_date: req.body.insurance_date,
-                insurance_due: req.body.insurance_due,
-                registration: req.body.regitration
-            }
+            const restaurantId = req.body.restaurant_id
+            const review = req.body.text
             const userInfo = {
                 name: req.body.name,
-                user_id: req.body.user_id
+                _id: req.body.user_id
             }
             const date = new Date()
 
-            const vehicleInfoResponse = await VehiclesInfoDAO.addVehicleInfo(
-                vehicleId,
+            const ReviewResponse = await ReviewsDAO.addReview(
+                restaurantId,
                 userInfo,
-                vehicleInfo,
+                review,
                 date
             )
             res.json({ status: "Success" })
