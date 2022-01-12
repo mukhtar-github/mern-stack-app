@@ -23,26 +23,21 @@ export default class ReviewsController {
         }
     }
 
-    static async apiUpdateVehicleInfo(req, res, next) {
+    static async apiUpdateReview(req, res, next) {
         try {
-            const vehicleInfoId = req.body.vehicleInfo_id
-            const updateInfo = {
-                accident_history: req.body.accident_history,
-                insurance_id: req.body.insurance_id,
-                insurance_date: req.body.insurance_date,
-                insurance_due: req.body.insurance_due
-            }
+            const reviewId = req.body.review_id
+            const text = req.body.text
             const date = new Date()
 
-            const vehicleInfoResponse = await VehiclesInfoDAO.updateVehicleInfo(
-                vehicleInfoId,
+            const reviewResponse = await ReviewsDAO.updateReview(
+                reviewId,
                 req.body.user_id,
-                updateInfo,
+                text,
                 date
             )
 
-            var { error } = vehicleInfoResponse
-            if (vehicleInfoResponse.modifiedCount === 0) {
+            var { error } = reviewResponse
+            if (reviewResponse.modifiedCount === 0) {
                 throw new Error(
                     "Unable to update info - user may not be original poster!"
                 )
