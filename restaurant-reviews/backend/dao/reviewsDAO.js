@@ -21,7 +21,7 @@ export default class ReviewsDAO {
                 user_id: user._id,
                 date: date,
                 text: review,
-                restaurantId: ObjectId(restaurantId)
+                restaurant_id: ObjectId(restaurantId)
             }
             return await reviews.insertOne(reviewDoc)
         } catch (e) {
