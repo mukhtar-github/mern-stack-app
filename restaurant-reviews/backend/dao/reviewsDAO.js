@@ -29,4 +29,18 @@ export default class ReviewsDAO {
             return { error: e}
         }
     }
+
+    static async updateReview(reviewId, userId, text, date) {
+        try {
+            const updateResponce = await reviews.updatetOne(
+                { user_id: userId, _id: ObjectId(reviewId) },
+                { $set: { text: text}, date: date }
+            )
+            
+            return updateResponce
+        } catch (e) {
+            console.error(`Unable to update review: ${e}`)
+            return { error: e}
+        }
+    }
 }
