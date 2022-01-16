@@ -437,8 +437,6 @@ Now, *in the url, I'm going to post review, and in the body, let's do restaurant
 {
     "status": "Success"
 }
-// Atlas Output
-QUERY RESULTS 0
 ```
 
 Okay, now we have *two reviews, and we have the restaurant_id, so I'm going to copy that*. Then in *the url will be -- localhost:6000/api/v1/restaurants/id/5eb3d668b31de5d588f4293c, and this time I'm going to do a GET request and see what happens*.
@@ -502,9 +500,7 @@ Okay, now we have *two reviews, and we have the restaurant_id, so I'm going to c
 }
 ```
 
-Okay so we just got this specific restaurant id if we scroll down now we have the reviews look this is this is an array so remember quincy says bad bo says nice so it worked we were able to get a list of the reviews for the restaurant that way
-
-now we never really need to get an individual review so we don't actually have any route we don't have a get rid out around to get a review because we'll we'll never be getting just an individual review we'll just be getting all of the reviews or just editing and editing a review so we are done with our backend server all the route to work and now we're going to create our front end and connect it to our back end
+Okay, so we just got the specific *restaurant_id, if we scroll down, now we have the reviews, look this is an array, so remember Major says "Bad!", and Mukhtar says "Nice"*. So it worked, we were able to get a list of the reviews for the restaurant that way. Now, *we never really need to get an individual review, so we don't actually have any route to get a review, because we'll never be getting just an individual review, we'll just be getting all of the reviews or just editing a review*. So we are done with our *backend server, all the routes worked, and now we're going to create our frontend and connect it to our backend*.
 
 (1:05:38) Create React frontend
 65:42
