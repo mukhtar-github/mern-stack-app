@@ -322,7 +322,7 @@ So now I'm going to make a *post request to localhost:6000/api/v1/restaurants/re
 
 Let's go over to the *Mongodb Atlas interface*. I'm going to refresh, and this is how we're going to see if it got successfully put into our database. So we're on *reviews*, and here it is look we got *text: "Great Food!", we got the user_id: "1234", we got the name: "Mukhtar", we got the restaurant_id: 5eb3d669b31de5d588f45e8f*, and everything got entered correctly.
 
-Now let's see if we can *edit it*. So *to edit it*, we are going to need the *objectId number*. So let me copy it, and we'll go back over *to Insomnia*. This is going to be a *put request*, instead of *restaurant id, it's going to be review id*, and then we'll paste the copied *review objectId number*. Now we can keep the *user id and the name in there because it has to check to see if the same user id is creating that review* and then we are going to change the text to bad food.
+Now let's see if we can *edit it*. So *to edit it*, we are going to need the *objectId number*. So let me copy it, and we'll go back over *to Insomnia*. This is going to be a *put request*, instead of *restaurant id, it's going to be review id*, and then we'll paste the copied *review objectId number*. Now we can keep the *user id and the name in there because it has to check to see if the same user id is creating that review, and then we are going to change the text to Bad Food!*.
 
 ```javascript
 // PUT => http://localhost:6000/api/v1/restaurants/review
