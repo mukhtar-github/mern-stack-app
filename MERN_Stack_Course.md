@@ -385,8 +385,126 @@ We're going *to add a field of reviews -- $addFields: {reviews: "$reviews"}, and
 
 And then for *getCuisines()*, this is kind of the simplest one, we have an *empty array -- let cuisines = []*, and we're just going to *cuisines = await restaurants.distinct("cuisine")*, that means we're going to get all the *distinct cuisines*. One of each *cuisine*, because *a lot of restaurants have the same cuisine*, so we're going to *get each cuisine one time*, and we're just going to *return those cuisines*. And that's all. So we got that saved, it's time to test this out again.
 
-So let's just look at our routes file again that's not it here we go so we're going to test we've tested this route this route this route this route now we're going to test these two routes first we're going to test the cuisines route so restaurant slash cuisines and then this is going to be a get request if i send for that and now here's all the cuisines you can see it's just a list here and later we can use this to populate the drop down menu now we're going to do the id one so we're gonna look for a well first of all let's get a list we need to get a restaurant id so if i sent oh before that let's make another review because we when we get a specific restaurant id we want the reviews to come back as well so i'm going to make i'm going to get the list of restaurants and get that restaurant id now i'm going to review post and let's do [Music]64:03 restaurant id and we'll put that id in there and then we will do the review which is going to be text it's going to say nice and then let's try another one that's going to say bad and this is going to be from a different person i'm going to put one two three four six and this is just going to say quincy now i'll send that okay now we have two reviews and we have this restaurant id so i'm gonna copy that id slash and i'm gonna paste in the restaurant id right there and this time i'm gonna do a get request and see what happens okay so we just got this specific restaurant id if we scroll down now we have the reviews look this is this is an array so remember quincy says bad bo says nice so it worked we were able to get a list of the reviews for the restaurant that way now we never really need to get an individual review so we don't actually have any route we don't have a get rid out around to get a review because we'll we'll never be getting just an individual review we'll just be getting all of the reviews or just editing and editing a review so we are done with our backend server all the route to work and now we're going to create our front end and connect it to our back end
+So let's just look at our *routes file* again. So, now we're going to *test these two routes*. First we're going to test the *cuisines route*, so *localhost:6000/api/v1/restaurants/cuisines*, and then this is going to be a *get request*. If I *send* for that, and now here's all the cuisines, you can see it's just a list here, and later we can use this to populate the *drop down menu*.
 
+```javascript
+[
+    "Afghan",
+    "African",
+    "American",
+    "Armenian",
+    "Asian",
+    "Australian",
+    "Bagels/Pretzels",
+    "Bakery",
+    "Bangladeshi",
+    "Barbecue",
+    "Bottled beverages, including water, sodas, juices, etc.",
+    "Brazilian",
+    "CafÃ©/Coffee/Tea",
+    "Café/Coffee/Tea",
+    "Cajun",
+    "Californian",
+    "Caribbean",
+    "Chicken",
+    "Chilean",
+    "Chinese",
+    "Chinese/Cuban",
+    "Chinese/Japanese",
+    "Continental", ...
+]
+```
+
+Now, we're going to do the *id* one. So, first of all let's get a list, we need to get a *restaurant_id*, because when we get a specific *restaurant_id, we want the reviews to come back as well*. So I'm going to *get the list of restaurants, and get that restaurant_id -- GET - localhost:6000/api/v1/restaurants/ -- Output - {"restaurants": [{"_id": "5eb3d668b31de5d588f4293c", ...]}*.
+
+Now, *in the url, I'm going to post review, and in the body, let's do restaurant_id and we'll paste that _id in there, and then we will do the review which is going to be text, it's going to say "Nice"*. And then let's try another one *that's going to say "Bad!", and this is going to be from a different person, I'm going to use a different user_id -- "user_id": "1236", and this is just going to say -- "name": "Major". Now I'll send that*.
+
+```javascript
+// POST http://localhost:6000/api/v1/restaurants/review
+{
+    "restaurant_id": "5eb3d668b31de5d588f4293c",
+    "text": "Nice",
+    "user_id": "1234",
+    "name": "Mukhtar"
+},
+{
+    "restaurant_id": "5eb3d668b31de5d588f4293c",
+    "text": "Bad!",
+    "user_id": "1236",
+    "name": "Major"
+}
+// Insomnia Output
+{
+    "status": "Success"
+}
+// Atlas Output
+QUERY RESULTS 0
+```
+
+Okay, now we have *two reviews, and we have the restaurant_id, so I'm going to copy that*. Then in *the url will be -- localhost:6000/api/v1/restaurants/id/5eb3d668b31de5d588f4293c, and this time I'm going to do a GET request and see what happens*.
+
+```javascript
+{
+    "_id": "5eb3d668b31de5d588f4293c",
+    "address": {
+        "building": "284",
+        "coord": [
+            -73.9829239,
+            40.6580753
+        ],
+        "street": "Prospect Park West",
+        "zipcode": "11215"
+    },
+    "borough": "Brooklyn",
+    "cuisine": "American",
+    "grades": [
+        {
+            "date": "2014-11-19T00:00:00.000Z",
+            "grade": "A",
+            "score": 11
+        },
+        {
+            "date": "2013-11-14T00:00:00.000Z",
+            "grade": "A",
+            "score": 2
+        },
+        {
+            "date": "2012-12-05T00:00:00.000Z",
+            "grade": "A",
+            "score": 13
+        },
+        {
+            "date": "2012-05-17T00:00:00.000Z",
+            "grade": "A",
+            "score": 11
+        }
+    ],
+    "name": "The Movable Feast",
+    "restaurant_id": "40361606",
+    "reviews": [
+        {
+            "_id": "61e478108b470f83a0d7c277",
+            "name": "Major",
+            "user_id": "1236",
+            "date": "2022-01-16T19:54:56.333Z",
+            "text": "Bad!",
+            "restaurant_id": "5eb3d668b31de5d588f4293c"
+        },
+        {
+            "_id": "61e477d18b470f83a0d7c276",
+            "name": "Mukhtar",
+            "user_id": "1234",
+            "date": "2022-01-16T19:53:53.269Z",
+            "text": "Nice",
+            "restaurant_id": "5eb3d668b31de5d588f4293c"
+        }
+    ]
+}
+```
+
+Okay so we just got this specific restaurant id if we scroll down now we have the reviews look this is this is an array so remember quincy says bad bo says nice so it worked we were able to get a list of the reviews for the restaurant that way
+
+now we never really need to get an individual review so we don't actually have any route we don't have a get rid out around to get a review because we'll we'll never be getting just an individual review we'll just be getting all of the reviews or just editing and editing a review so we are done with our backend server all the route to work and now we're going to create our front end and connect it to our back end
 
 (1:05:38) Create React frontend
 65:42
