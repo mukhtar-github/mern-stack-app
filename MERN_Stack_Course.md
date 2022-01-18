@@ -526,6 +526,4693 @@ This is going to be *Login*. This is going to be *RestaurantsList*. And then thi
 
 So we're going to *import AddReview from "./components/add-review", Restaurant, RestaurantsList, and Login*. And now let's see what we're going to *return in the App.js function*. Okay I just pasted in some new code for what the function is going to return, and I'm going to go over it right now. It's going to start with the *navbar*. Now let me just highlight the *navbar*. Now this *navbar is just basically copied and pasted from the bootstrap documentation*. So *bootstrap has all these different components and suggested ways of how to make them*.
 
-and so one way you can do if there's a component you want you go over to the bootstrap documentation you can copy the code for that and then you can update it for your purposes so this is just a basic bootstrap nav bar and it's going to have three different links the first link you can see is going to be so it it's all so this is how the navbar style that's going to be these different things are different bootstrap classes that are used to expand to style the navbar the first link is this one right here
+So one way you can do it is, if there's a component you want, *just go over to the bootstrap documentation, you can copy the code for that and then you can update it for your purposes*. So this is just a *basic bootstrap navbar*, and it's going to have *three different links*. The first link you can see is going to be so it it's all so this is how the navbar style that's going to be these different things are different bootstrap classes that are used to expand to style the navbar the first link is the *Restaurant Reviews*.
 
 73:05
+which is going to be
+73:06
+the main almost like a logo that the
+73:10
+main the main
+73:11
+brand or class name is nabar brand which
+73:14
+is the name of the website
+73:15
+restaurant reviews sometimes this would
+73:17
+be an image or logo this is just me text
+73:20
+and it's just going to go to slash
+73:22
+restaurants
+73:23
+and you'll see soon that slash
+73:24
+restaurants and just slash are they
+73:26
+going to be go to the same
+73:28
+the same url the same component
+73:31
+and then there'll be two other buttons
+73:33
+in the nav bar
+73:35
+and they're going to be set a little
+73:36
+different they're they're the nav bar
+73:38
+nav so this is the
+73:40
+the brand part of the nav bar and these
+73:41
+this is the navigation part of the net
+73:43
+nav bar
+73:44
+and the first item is just going to be
+73:48
+to link
+73:49
+to restaurants now this link part
+73:52
+that's that's imported right from react
+73:55
+router dom
+73:56
+and that will route to a different
+74:01
+url which is going to load a different
+74:03
+component so if you click on the word
+74:05
+restaurant
+74:06
+it's going to link to restaurants and
+74:08
+then we have this next section
+74:10
+now this is going to be one link but
+74:13
+it's going to look different
+74:15
+depending on our a variable
+74:18
+so it can either look like saying
+74:22
+login which will link to the login page
+74:26
+or it can say log out and then the
+74:29
+user's name the user not that name so it
+74:31
+could say log out
+74:32
+bow and if it says this on click it's
+74:35
+going to
+74:36
+run a function the log out function
+74:40
+and we still have to create the log out
+74:42
+function
+74:43
+it's going to determine whether it's
+74:45
+going to show log out
+74:46
+or log in because of whether
+74:50
+the user exists so this is a ternary say
+74:53
+statement
+74:53
+now in react we can use these brackets
+74:56
+here
+74:57
+to put in some code so
+75:00
+these curly braces not brackets these
+75:02
+curly braces
+75:04
+are putting in some code and the code is
+75:06
+a ternary
+75:07
+statement where we're going to say user
+75:09
+if that's true or false it's true
+75:11
+if there is a user it's false if this is
+75:13
+null
+75:14
+and then the question mark uh is going
+75:16
+to say that the first item
+75:18
+after the question mark is what happens
+75:20
+if it's true
+75:21
+and then we have a colon the second
+75:24
+section after the colon is going to
+75:29
+be if it's false so if there is a user
+75:32
+we're going to return this code if
+75:35
+there's
+75:35
+not a user we're going to return this
+75:38
+which is to log in so while we're
+75:41
+talking about the log
+75:42
+out function we we we're going to
+75:44
+implement the login logout function
+75:46
+we're also going to make a user
+75:49
+variable state a state variable so right
+75:52
+up here
+75:55
+actually right here the first line
+75:58
+is we are going to create a user
+76:01
+variable in the state
+76:02
+now here we are going to use react hooks
+76:06
+and the method is just like this
+76:09
+const user
+76:13
+set user
+76:19
+react dot u state
+76:26
+null
+76:30
+okay so the react.ustate
+76:34
+is a way to to create and create
+76:38
+a state variable that you can use in
+76:40
+your react app and this is going to be
+76:42
+the initial value which is null and so
+76:46
+it's going to set null to the user
+76:48
+variable and then we also have a setter
+76:50
+so we can use set user this is a
+76:53
+function that we can use to
+76:54
+update the user variable later in our
+76:57
+program
+76:58
+so now we have the user variable and now
+77:01
+we're going to create two functions the
+77:03
+login function and the logout function
+77:06
+we'll create these as async functions so
+77:08
+async
+77:09
+function
+77:13
+login and
+77:16
+you're going to pass in we're going to
+77:18
+pass in the user but we'll default it to
+77:20
+null
+77:24
+and then we're going to set user to
+77:27
+user so now
+77:31
+if you call the login function and pass
+77:33
+in the user
+77:34
+this user variable will be updated with
+77:36
+the user that you pass them to that
+77:38
+function
+77:39
+and then we can also do a similar thing
+77:41
+with the logout function
+77:43
+so async function log out
+77:51
+set user null
+77:55
+okay so when you log out it's just
+77:56
+making the user null there is no user
+77:59
+you've been logged out just so you know
+78:01
+for this app i'm not going to be
+78:03
+implementing a full
+78:04
+login system i'm going to be basically
+78:07
+implementing a dummy login system
+78:09
+that's a little out a full login system
+78:11
+is a little outside the scope of what i
+78:13
+want to teach in this tutorial
+78:15
+so we're just making a dummy login
+78:17
+system which is basically a form
+78:19
+that someone when when someone uh fills
+78:21
+out the form they click log
+78:22
+in it's just going to set the user with
+78:24
+that those details and it's not even
+78:26
+going to save the user to the database
+78:28
+or anything like that
+78:30
+this is just kind of a dummy login
+78:32
+system that you can easily
+78:34
+update with a more fully full-fledged
+78:37
+login system
+78:38
+you can maybe even set it up to use
+78:41
+google sign in
+78:42
+or some sort of authentication provider
+78:46
+but for now we're just having a dummy
+78:47
+system just for this example
+78:50
+but we have this login and log out
+78:53
+function
+78:54
+and so if someone clicks log out it's
+78:56
+going to log out the user here
+78:59
+and if they click login it's going to go
+79:01
+to this url
+79:02
+and this is going to be a page we can
+79:04
+log in that we still have to create
+79:06
+but let's just keep scrolling down we
+79:08
+are past
+79:10
+the navbar section and now we're going
+79:13
+to have
+79:13
+basically the the route section
+79:17
+or the rest of the page so this is the
+79:19
+rest of the page here
+79:21
+and it's we are going to use a
+79:24
+switch to switch between a few different
+79:27
+routes
+79:28
+so the first route is either going to be
+79:31
+slash or slash restaurant
+79:33
+and that's going to load this component
+79:35
+restaurants list
+79:37
+the second route is one that i don't
+79:40
+actually need
+79:42
+i was trying something out and i ended
+79:44
+up not he's
+79:45
+deciding not to use that that thing that
+79:48
+last route so the next route is
+79:51
+restaurants
+79:52
+slash id slash review so up here
+79:56
+we do a component equals restaurant list
+79:59
+here
+79:59
+instead of doing components we're going
+80:01
+to do render the reason why
+80:03
+we're using render instead of components
+80:05
+is because this allows us to
+80:07
+pass in the props to the component that
+80:11
+we're loading
+80:12
+so here we're loading restaurants list
+80:13
+here we're loading the ad review
+80:15
+component
+80:16
+and we're passing in the props we're
+80:18
+passing in the user
+80:20
+to this ad review component also
+80:23
+uh we'll be able to access this
+80:26
+id variable from from that
+80:30
+component and then we also have the
+80:32
+route of the restaurants slash id
+80:35
+so this would be loading a spec and this
+80:38
+is going to load the
+80:39
+the restaurants component and then we
+80:42
+have the login route
+80:43
+and that's going to load the login
+80:44
+component so those are all the routes
+80:48
+we have the the route that the
+80:50
+restaurant list
+80:51
+route the ad review the restaurant route
+80:54
+and the login route where it says
+80:57
+restaurant that made me realize that
+81:00
+this should be a singular okay
+81:03
+let's start with creating the restaurant
+81:06
+list
+81:06
+component which is going to list all
+81:09
+the restaurants now a key part of
+81:13
+listing
+81:14
+all the restaurants is getting the
+81:16
+restaurants
+81:17
+from the database we have to get a list
+81:20
+of restaurants
+81:21
+from the backend server that's connected
+81:24
+to our mongodb
+81:26
+database and then we're going to need to
+81:30
+display those in the restaurants list
+81:34
+okay i'm just checking over on the
+81:36
+browser to see how it's looking
+81:38
+and i see an error so it's obviously
+81:40
+it's really good to check
+81:42
+your to check things and test things
+81:44
+frequently to see if you have an error
+81:46
+and then it reminded me of something
+81:47
+that we forgot to do it says you should
+81:49
+not use a link
+81:51
+outside a router so let's go back over
+81:54
+here
+81:54
+and so we had updated the app.js
+81:58
+file but there's a file that we need to
+82:00
+update also that's actually even loaded
+82:02
+right before app.js
+82:04
+which is the index.js and this
+82:07
+is really what kind of loads everything
+82:09
+else and react
+82:11
+so most of this stuff we don't
+82:14
+even need so we don't need the css file
+82:17
+because we're just using bootstrap
+82:20
+we don't need this web vitals
+82:24
+but we are going to need something from
+82:27
+react router
+82:28
+so we're going to import
+82:32
+browse browser router
+82:38
+from react
+82:41
+router dom
+82:47
+okay and instead of this react strict
+82:50
+mode
+82:51
+we are going to be using browser router
+82:54
+so we're going to put browser router
+82:59
+and we don't we're not even going to
+83:01
+mess with this web
+83:02
+vitals thing so i'm going to save that
+83:06
+and then let's go over here
+83:10
+and see how it's looking now it says
+83:13
+hello world so let's test all of our
+83:16
+routes actually so that's the
+83:17
+restaurants list
+83:18
+we have the login that also says hello
+83:20
+world i guess i could have made these
+83:22
+say
+83:23
+different things so you would know that
+83:24
+they're working so
+83:26
+like for instance if we switch login we
+83:29
+could actually just type in
+83:30
+login here if i save that and then now
+83:33
+restaurants
+83:34
+log in so those routes are working
+83:39
+okay well let's update our restaurants
+83:42
+list like i was saying we're gonna need
+83:44
+to get
+83:46
+a list of restaurants and the list of
+83:48
+restaurants
+83:49
+has to come from the database
+83:52
+so we have to figure out we have to we
+83:54
+have to implement some code
+83:56
+that's going to get
+83:59
+information from our backend server
+84:02
+we're going to create a separate file
+84:05
+for that
+84:06
+so this is going to be under a new
+84:09
+directory
+84:10
+called services so
+84:13
+here i'm going to click new folder and
+84:15
+put services
+84:19
+so underneath source we have components
+84:22
+and services and underneath services
+84:26
+we're going to create a new file
+84:27
+called restaurant
+84:32
+dot js and we are going to use a library
+84:35
+called
+84:36
+axios for the get request the post
+84:38
+request
+84:39
+the put request and the delete requests
+84:42
+and we're going to create a some
+84:44
+helper file that's going to kind of set
+84:46
+up axios how we want it to work
+84:48
+and we're going to import that into this
+84:50
+file so in the source
+84:52
+directory again we're going to create a
+84:54
+new file called
+84:55
+http common.js
+84:59
+this will be our helper file okay in
+85:02
+this http common file
+85:04
+i just pasted in some code we're
+85:05
+importing axios
+85:07
+which while i'm thinking about it let's
+85:09
+make sure we install that so let's go
+85:11
+over to
+85:13
+here wait which one this one
+85:17
+we're going to close stop the server
+85:20
+and do mpm install axios
+85:27
+okay got it axios installed now we'll
+85:29
+just restart the server
+85:32
+okay back to this http common file
+85:35
+so we're just setting two things
+85:38
+the base url which this is the url
+85:42
+of our backend server locals 5000 slash
+85:44
+api plus v1 slice restaurants
+85:46
+and then this is the base url and all
+85:49
+the other routes for our backend server
+85:51
+come after this and then we're just
+85:54
+going to set
+85:55
+the header and now we're going to be
+85:58
+able to import this
+85:59
+and make our http
+86:02
+post get delete requests and stuff like
+86:04
+that
+86:06
+more easily with all these things being
+86:07
+set automatically
+86:09
+i'm going to save this and then i'm
+86:11
+going to go back into
+86:12
+the services restaurant.js
+86:16
+and then i'm just going to import that
+86:17
+file that we just created
+86:19
+import http from
+86:22
+[Music]
+86:23
+slash http
+86:26
+common
+86:30
+and then i'm going to make a class
+86:32
+called
+86:33
+[Music]
+86:34
+restaurant
+86:37
+data service
+86:42
+this is where we're going to make all
+86:44
+the
+86:45
+functions that are going to make api
+86:48
+calls
+86:48
+and return the information from the api
+86:51
+calls
+86:53
+okay i'm going to just paste in all of
+86:56
+these
+86:56
+functions that we're going to use for
+86:59
+the different
+87:00
+http requests so the first request is
+87:03
+going to be
+87:04
+for get all so if you call get all it's
+87:06
+going to have a default page number of
+87:08
+zero
+87:09
+and it's going to do a hp
+87:13
+get request of this url now this url
+87:16
+just added this is what's added to the
+87:19
+end of this base url
+87:21
+so this base url is already the url
+87:24
+for doing the get all and then you can
+87:28
+add the page
+87:29
+number also what what page you want and
+87:31
+then if you want to
+87:32
+get a specific id a restaurant of a
+87:36
+specific id the url
+87:37
+is this base url but slash id
+87:41
+and then with the id in here and then
+87:44
+find the find is going to take
+87:48
+three things the query
+87:52
+which is the actual search term or
+87:55
+number
+87:55
+the number if it's a zip code or search
+87:57
+term if it's a cuisine or a name
+87:59
+and what you're searching by you're
+88:01
+you're either going to be searching by a
+88:03
+name
+88:03
+by a zip code or by a cuisine and the
+88:06
+actual search is the query
+88:07
+and then what page number you want so
+88:10
+it's going to do a get request
+88:12
+and this is what it's going to add to
+88:14
+the end of the base url
+88:16
+and it's going to be like zip code
+88:20
+by equals and then the query is going to
+88:22
+be what the zip code is and the page
+88:24
+number here
+88:25
+create review is just going to do a post
+88:27
+request this last review with the with
+88:29
+the data
+88:30
+update review put request with the data
+88:34
+delete delete with and but you're going
+88:36
+to have the id on the end
+88:37
+or get cuisines okay
+88:40
+now we can start creating
+88:44
+our component our restaurant list
+88:47
+component
+88:48
+first of all let's import a little more
+88:50
+things so
+88:51
+we are also going to be using the you
+88:53
+state and use effect from react hooks
+88:56
+we're going to import our restaurant
+88:58
+data service
+88:59
+which is the thing that we just created
+89:02
+and then we're also going to get a link
+89:03
+from react router dom
+89:05
+i'm just going to update this so it's a
+89:07
+different type of function
+89:09
+so this is going to const
+89:12
+restaurants list equals props
+89:16
+so this is how it's going to be able to
+89:18
+take the props and use the props
+89:20
+as part of this function this component
+89:25
+so we're going to use react hooks to
+89:28
+create a bunch of state variables
+89:31
+so here we are we're creating the
+89:34
+restaurants variable which is going to
+89:36
+start as an
+89:36
+empty array and then the search name
+89:39
+search zip and search cuisine
+89:41
+so we're going to keep track of what
+89:45
+someone's searching for on the
+89:47
+restaurant list
+89:48
+and then also the cuisines the reason
+89:51
+why we have these
+89:53
+is because right on the restaurants list
+89:56
+page people are going to be able to
+89:59
+search
+89:59
+for these all these items so we need to
+90:02
+have variables for all the items that
+90:04
+people are searching for
+90:06
+okay i just put in some more code here
+90:07
+that i'm going to review we have here we
+90:09
+have the use effect
+90:11
+this is the way that react hooks this is
+90:14
+the way you tell react that your
+90:15
+component needs to do something
+90:17
+after render so after rendering it's
+90:20
+going to retrieve
+90:21
+the restaurants and retrieve the
+90:24
+cuisines
+90:25
+and these are functions we can look at
+90:28
+those functions right now
+90:29
+so here's one of them retrieve
+90:31
+restaurants so we're doing the
+90:32
+restaurant data service dot
+90:34
+get all and that's something that we
+90:38
+just
+90:38
+created in the data services and then
+90:41
+it's going to
+90:42
+log the data but more importantly it's
+90:44
+going to set the restaurants to be the
+90:46
+response that restaurant
+90:47
+data.restaurants
+90:49
+and so this is going to go into
+90:52
+the restaurants state and we're also
+90:56
+going to retrieve
+90:57
+the cuisines very similar we're going to
+91:01
+use the data service to get cuisines
+91:03
+and we are going to log them and then
+91:05
+we're going to set the cuisines
+91:07
+now we're going to add so this is going
+91:10
+to be in the drop down menu
+91:11
+so instead of just putting the response
+91:15
+dot data
+91:16
+into the cuisines variable first we're
+91:19
+going to
+91:20
+start with an all cuisine element
+91:24
+and then we're going to concat to this
+91:26
+array the rest of the data
+91:28
+so the first element in the data is
+91:30
+going to be all cuisines
+91:31
+so that's going to be the first item in
+91:33
+the drop down menu if you don't want to
+91:34
+select a specific cuisine but you want
+91:36
+to show all the cuisines
+91:38
+so if we go back up here you'll see soon
+91:41
+that there's going to be a form at the
+91:42
+top of the page
+91:44
+and people can search for by name zip
+91:46
+code or cuisine
+91:48
+so if someone searches for a name a zip
+91:50
+code or a cuisine
+91:52
+these three functions are going to when
+91:55
+someone types into the search box
+91:57
+we're going to take the value of the
+91:58
+search box and we're going to set the
+92:00
+name or set the zip or set the cuisine
+92:03
+to whatever thing that the person typed
+92:06
+in or in the case of the
+92:07
+cuisine if they selected it so let's
+92:10
+keep going down here
+92:12
+here's a function to refresh the list of
+92:14
+restaurants
+92:16
+if that's needed one of the times is if
+92:19
+someone searches for all cuisines
+92:21
+it will retrieve all the restaurants
+92:24
+okay now if someone tries to
+92:28
+find something now this function is
+92:30
+actually going to be called
+92:32
+from these functions so someone's going
+92:35
+to type in the name that they're going
+92:36
+to search for and they're going to click
+92:38
+the button
+92:38
+to search once the button is is clicked
+92:42
+then we're going to call this function
+92:43
+find by name and they want to call the
+92:46
+find
+92:46
+and pass in the search name and the name
+92:49
+if they're finding my zip we're going to
+92:51
+pass in the search zip and zip code
+92:53
+if they're refining by cuisine we're
+92:55
+gonna find
+92:56
+by we're gonna pass in the search
+92:58
+cuisine that they selected
+93:00
+and the word cuisine or if they have
+93:02
+selected all cuisine we're just gonna
+93:04
+refresh the list
+93:05
+so then it goes to this find function
+93:08
+the find function
+93:09
+is going to pass in the query
+93:13
+and the buy so for example here the
+93:14
+search name and the
+93:16
+buy is the name so we're going to call
+93:19
+the restaurant data service
+93:20
+with the query and the buy if we go back
+93:23
+to the data services
+93:31
+we can see the query and the buy so buy
+93:35
+would be
+93:37
+name so let's say the name we're looking
+93:39
+for all
+93:40
+restaurants that have the word food and
+93:42
+the name so by would say
+93:44
+name and then query would say food
+93:47
+or by could say zip code and then query
+93:50
+could be
+93:51
+the number of the zip code
+93:55
+so after we get the result of the find
+93:58
+we're going to console log the data and
+94:01
+then we're going to set
+94:02
+restaurants to be whatever comes back
+94:05
+from the the backend server okay those
+94:08
+are all the functions
+94:10
+so let's go really quick over the html
+94:12
+that we're creating
+94:14
+now we're making heavy use of bootstrap
+94:16
+so most of these classes are directly
+94:18
+from bootstrap to help style things
+94:21
+and we can see that we have an input
+94:24
+group
+94:25
+because at the top of the page we're
+94:26
+going to have three
+94:28
+input boxes or or three ways that people
+94:30
+can search the first one
+94:33
+is searching by name and impop input box
+94:36
+which is going to say search by name and
+94:38
+the value is gonna be the search name
+94:40
+and on change is gonna be on change
+94:41
+search name
+94:42
+to so as soon as someone types something
+94:45
+it gets set
+94:46
+as the name and then we have the second
+94:49
+one or well then we have the button so
+94:51
+if someone clicks this button
+94:52
+and on click it's going to find by name
+94:54
+then we have this next section which is
+94:56
+the search by
+94:57
+zip is going to be just like the one we
+94:59
+just saw for name but it's going to be
+95:01
+for the zip so someone can
+95:04
+change the search dip and they click the
+95:06
+button it's going to find my zip
+95:08
+and then the final one is going to be a
+95:09
+little different it's going to be a drop
+95:10
+down menu
+95:11
+for the cuisines we're going to see all
+95:14
+this in just a second on the page
+95:16
+but we're going to select unchange so on
+95:18
+change it's going to do on
+95:19
+change search cuisine it's going to set
+95:21
+the cuisine variable to the cuisine that
+95:22
+the person selected
+95:24
+and to get the cuisines in the list
+95:27
+we're going to use this react function
+95:30
+this map function cuisines remember
+95:31
+cuisines is the list of cuisines
+95:33
+and we're going to map it and for each
+95:35
+cuisine in that array
+95:37
+we're going to return an option for the
+95:40
+select box
+95:41
+and the value is going to be the cuisine
+95:43
+and then
+95:44
+the reason why it's substring 0 20
+95:46
+because some cuisines are very
+95:48
+very long and we want to make sure the
+95:52
+search box isn't too long so we're going
+95:54
+to just have it
+95:56
+just the first 20 characters or is that
+95:59
+21 characters
+96:00
+just the first little bit of the cuisine
+96:03
+and
+96:04
+so people and search the cuisine and
+96:06
+they click the button it'll find my
+96:08
+cuisine
+96:09
+okay now the next section is we have
+96:12
+another row here a row is from bootstrap
+96:15
+and we're going to use another map
+96:17
+function to map through the restaurants
+96:19
+array
+96:19
+we're in react this curly braces
+96:23
+means that it's going to be some sort of
+96:26
+javascript code
+96:27
+and for each restaurant
+96:31
+we're going to first get
+96:34
+the address so we're going to be putting
+96:36
+the address of each
+96:38
+restaurant and the address in the
+96:41
+database is actually three different
+96:43
+fields we have the building
+96:45
+which is like the number then we have
+96:47
+the street
+96:49
+then we have the zip code
+96:53
+so we're just going to put that on to
+96:55
+one string that we can use
+96:58
+and so for each restaurant we're
+97:00
+returning
+97:02
+this whole thing right here which again
+97:05
+is directly from bootstrap and there are
+97:07
+different cards and each card is going
+97:09
+to have the name of the restaurant
+97:11
+the cuisine the address
+97:16
+and then there is going to be a
+97:19
+link to view reviews and if you click
+97:21
+this rank
+97:22
+link it's going to go to this new route
+97:25
+ralph
+97:25
+restaurant slash and then it's going to
+97:27
+have the restaurant id
+97:33
+and then also there's going to be a link
+97:35
+here to link to
+97:37
+google maps so the reason why we have
+97:41
+one of the reasons we got this variable
+97:42
+up here so we can use it both
+97:44
+here and we can use it for this link to
+97:46
+google maps so
+97:48
+it's going to use this link from google
+97:51
+maps and it's just going to put the
+97:53
+address
+97:54
+on the end which is actually going to
+97:56
+create a link
+97:57
+to a google maps of that exact address
+98:00
+and then we have a bunch of classes from
+98:02
+bootstraps and it's going to be called
+98:04
+view map
+98:07
+let's test this out and see what it
+98:08
+looks like i'm going to save this
+98:10
+okay and here's our page so here are the
+98:14
+three different
+98:15
+search boxes i was talking about and
+98:17
+here we can
+98:18
+select a cuisine if we want and you can
+98:20
+see it's cut off like we
+98:21
+mentioned but most of the cuisines are
+98:24
+are less than
+98:25
+those characters and then we can see
+98:29
+all the restaurants and it cuts off
+98:32
+at 20. so we can search by
+98:35
+cuisine if i click search here now it's
+98:38
+just going to show
+98:39
+the african cuisine restaurants
+98:42
+or i can search by name and put
+98:45
+food click search and now all the
+98:49
+restaurants have the word food in them
+98:51
+or i can search by zip code
+98:53
+let's do one zero zero one four and
+98:56
+click search
+98:57
+and now all the restaurants
+99:01
+have the zip code of one zero zero one
+99:04
+four and if i click on view map
+99:08
+let's see what opens here the google map
+99:11
+opens
+99:12
+if i zoom in let's see if it even shows
+99:15
+the name of that restaurant i zoom in
+99:17
+look it says one if by land two if by
+99:20
+sea right there
+99:21
+and that is actually the name of the
+99:23
+restaurant from our database one if by
+99:25
+land 2 if by c
+99:26
+so that actually took us to the map
+99:30
+so let's say we want to go back to all
+99:32
+cuisines
+99:33
+and all cuisines is also means that
+99:37
+you can only search for one thing at a
+99:38
+time so if i click all cuisines it's
+99:40
+going to go back to every restaurant
+99:43
+another thing really quick right now i
+99:45
+do not have any pagination and i don't
+99:47
+plan to add any pagination
+99:49
+but because of how the api is set up it
+99:51
+would be pretty simple to add the
+99:53
+pagination yourself
+99:54
+so you could make something at the end
+99:56
+where you can maybe you would make
+99:58
+something at the be
+99:58
+the end of the data or maybe the
+100:00
+beginning of the data
+100:02
+where you could click next page previous
+100:04
+page and then go through the different
+100:05
+pages
+100:06
+for the front end we do not current i do
+100:08
+not currently have that
+100:09
+in the code but that's just like an
+100:11
+extra thing you could try to
+100:13
+add in but let's go to view reviews
+100:16
+well right now it just says hello world
+100:18
+because so we the route is restaurant
+100:20
+slash the id
+100:21
+and we have not created anything for the
+100:24
+reviews yet
+100:26
+that's what we need to create now we
+100:27
+need to create
+100:29
+what it looks like when you're viewing
+100:30
+an individual restaurant with the
+100:32
+reviews
+100:33
+so let's go back over to our code we are
+100:37
+going to open up
+100:38
+the restaurants file
+100:42
+and let's update the import so we're
+100:44
+going to also import used
+100:46
+stay in use effect and the restaurant
+100:48
+data
+100:49
+service and i'm going to change this to
+100:52
+the other kind of function where
+100:57
+props
+101:01
+now i'm just going to paste in some code
+101:03
+again and we'll review it but we're
+101:04
+going to create the initial
+101:06
+restaurant state which has all the
+101:08
+fields but they're just set to empty or
+101:11
+null and then we're going to create a
+101:14
+restaurant
+101:15
+we're going to use the initial
+101:16
+restaurant state to set up the
+101:18
+restaurant which is just
+101:20
+all these null and empty fields and then
+101:24
+the use effect okay when the use effect
+101:27
+is going to be called
+101:28
+when the page when the component first
+101:30
+renders and
+101:32
+how it has the this array here
+101:35
+with just this the id in the end in the
+101:38
+array
+101:39
+that means this use effect is only going
+101:41
+to be called
+101:43
+if this id is updated so if this
+101:46
+component is called multiple times it's
+101:48
+only going to call the get restaurants
+101:50
+again if this id is updated
+101:54
+so it's going to call get restaurants
+101:56
+with the id
+101:57
+and that's where it's going to load the
+102:00
+restaurant
+102:02
+through the data service restaurant data
+102:04
+service and they get the id
+102:05
+and then it's going to set the
+102:07
+restaurant as response.data
+102:10
+and it's going to log that or else if
+102:12
+there's an error it will log the error
+102:16
+and one thing you're going to be able to
+102:17
+do in here is
+102:19
+delete a review now this will only
+102:23
+you'll only be able to delete if you are
+102:25
+logged in as the user who created that
+102:27
+review
+102:29
+but when you do delete a review it's
+102:32
+going to need
+102:32
+a review id and the index
+102:36
+of the review from the review
+102:39
+array which is the state the reviews
+102:43
+the review variable from the state
+102:46
+so we're going to delete call delete
+102:48
+review with the review id
+102:50
+and then with the response we are going
+102:53
+to set
+102:54
+the restaurant with to be that array
+102:57
+the restaurant array without the
+102:59
+restaurant that was deleted
+103:01
+so we're going to take the previous
+103:02
+state of the restaurant array
+103:04
+and we're going to splice
+103:08
+the index of the one that was deleted so
+103:10
+whatever review is deleted we're going
+103:11
+to delete from the reviews
+103:13
+array and then we're going to return
+103:15
+that previous state with this
+103:17
+spliced array with with the array that
+103:19
+was deleted removed
+103:20
+back into the restaurants array
+103:25
+else or i'm not else but if there's an
+103:27
+error we're going to log the error
+103:29
+now let's update the actual html that's
+103:32
+returned from here
+103:36
+so we're going to check to see if there
+103:38
+is a restaurant
+103:39
+so remember whenever you see the
+103:40
+squiggly brace we're just about to put
+103:42
+in some code
+103:43
+and the code is a ternary operator okay
+103:46
+so if there is a restaurant
+103:48
+well first let's look what happens if
+103:49
+there's no restaurant if we go down this
+103:51
+line here
+103:52
+with the ternary operator if there's no
+103:55
+restaurant
+103:56
+it will say no restaurant selected
+103:59
+so if somehow you get to this
+104:02
+you are this route and there's no
+104:04
+restaurant i'll say no restaurant
+104:05
+selected
+104:07
+but most of the time there's going to be
+104:08
+a restaurant and it's gonna
+104:11
+that's what the so the first thing after
+104:13
+the question mark is if it's true if
+104:14
+there is a restaurant
+104:16
+we're gonna we're gonna put the
+104:18
+restaurant name
+104:19
+we're going to say what the cuisine is
+104:22
+say what the address is what the
+104:24
+building
+104:25
+the street the zip code
+104:29
+and there's also going to be a button
+104:31
+add review
+104:33
+which will link to this route
+104:34
+restaurants
+104:36
+slash the restaurant id slash
+104:40
+review so that's the route to add a
+104:43
+review to that restaurant
+104:46
+now we're going to list the reviews so
+104:48
+first there's this new heading of the
+104:50
+reviews
+104:53
+and if restaurant reviews that length is
+104:57
+more than zero that means there's some
+104:59
+reviews we're going to do something
+105:00
+if not it's going to show you what if
+105:02
+not it's going to say no reviews yet
+105:05
+but if there are reviews we're going to
+105:08
+map over the reviews and for each review
+105:11
+and then also we're going to get the
+105:13
+index of each item in that reviews array
+105:17
+for each review now we always have to
+105:20
+have a key so the key is going to be the
+105:21
+index
+105:22
+for each review we're going to put the
+105:25
+text now these are going to be cards
+105:27
+this is just part of bootstrap to show
+105:28
+cards we're going to put the review text
+105:31
+and they're going to have the user which
+105:32
+is the name the name of the user
+105:34
+and then the date and now
+105:37
+this is where we are going to show
+105:40
+buttons
+105:41
+depending on what user is logged in
+105:45
+so let's look at this so first of all we
+105:48
+check to see
+105:49
+if there is a user if there's a user
+105:52
+logged in
+105:53
+so if there's a user logged in and
+105:56
+if the user id equals the same
+106:00
+as the review dot user id so if the
+106:03
+logged in user has the same id
+106:05
+as the user id of the review
+106:08
+then now it just says and and again
+106:11
+that's just like a
+106:12
+a fancy way uh having the these
+106:15
+ands is a fancy way of saying if these
+106:19
+are true
+106:20
+then we're going to put this code in
+106:21
+here it
+106:23
+so as far as what what javascript you
+106:26
+can put
+106:27
+inside a react like this this is kind of
+106:30
+the best way to do it
+106:32
+you put and so it only gets to this last
+106:34
+part of adding this last part if the
+106:35
+things before
+106:36
+are true so if both these are true then
+106:39
+it's going
+106:40
+to put two different buttons we're going
+106:43
+to have this
+106:44
+delete review button which see it's
+106:47
+going to be delete
+106:48
+and on click when you
+106:51
+when you click it it's going to call the
+106:53
+delete review function
+106:54
+with the review id and the index and
+106:57
+also
+106:58
+we are going to have
+107:01
+a link here and this link is going to be
+107:04
+an
+107:05
+edit button if you click the edit button
+107:08
+it's going to
+107:09
+call the restaurants it's going to go to
+107:13
+the restaurants path the restaurant
+107:15
+slash
+107:15
+restaurant id slash review so that's the
+107:18
+place to edit a review and it's going to
+107:21
+pass
+107:22
+in the state of the current review
+107:26
+so we're going to if we're editing this
+107:29
+review
+107:30
+we're going to pass in the state of that
+107:32
+review so we can
+107:33
+fill in the fields with the actual text
+107:36
+of the current review
+107:37
+on the review page and that's
+107:40
+pretty much it because this is going to
+107:43
+create a
+107:44
+card for each element of the reviews
+107:46
+array
+107:47
+okay we can test that out so let me save
+107:50
+that
+107:51
+go back to the all the restaurants and
+107:54
+remember
+107:55
+we had already added some reviews to
+107:56
+this one just from
+107:59
+from insomnia so if we view reviews we
+108:01
+can see
+108:03
+nice so these are the two reviews
+108:06
+now we can't delete or edit them because
+108:09
+we're not logged in we have to log in as
+108:11
+one of these users to be able to delete
+108:12
+or
+108:13
+edit them so let's click login and we
+108:16
+can't because we haven't implemented
+108:18
+that page yet
+108:19
+so that's what we'll do now okay let's
+108:21
+go back to the login.js page
+108:24
+this is going to be a simple page with
+108:26
+just two text fields
+108:28
+for the user and the user id that you
+108:30
+submit and then it logs in with that
+108:32
+user and user id
+108:33
+remember what i said we're not doing a
+108:35
+full featured
+108:37
+authentication system this is just like
+108:39
+a dummy authentication system
+108:41
+and you would update this page with
+108:43
+something more complex if you wanted to
+108:45
+actually
+108:46
+use this in anything like production but
+108:48
+we're just going to make something
+108:49
+simple really quick
+108:50
+and i'm just going to update all this
+108:52
+with this new page and just go over it
+108:55
+so we're going to you we're going to
+108:56
+have the use date
+108:58
+and then we're going to create the login
+109:02
+component so the initial user state is
+109:04
+just going to be a blank name and a
+109:06
+blank id
+109:07
+and then we're going to create the user
+109:09
+variable which is the initial user state
+109:11
+which is just the blank name and
+109:13
+blank id and we're going to handle
+109:16
+input change because we we have this
+109:19
+form down down here and the form is just
+109:20
+going to have
+109:21
+two input fields we have this first
+109:23
+input field which is the username
+109:26
+and you can see we have the id of name a
+109:28
+name here
+109:29
+uh the value is user.name if you click
+109:31
+on it on change handle input change
+109:34
+and then this is also handle input
+109:36
+change on the id
+109:38
+which has the value of user.id and
+109:41
+so no matter whether you
+109:45
+it's doing a handle input change for
+109:47
+both of these for the username and id
+109:49
+event.target is going to get the name
+109:52
+and the value from the target
+109:54
+so so the name is going to be this so if
+109:56
+it gets the
+109:57
+it knows whether it's the name or the id
+110:02
+and then it's going to get the value
+110:05
+and then it's just going to set the set
+110:07
+the is it going to update the user state
+110:10
+with the new name or the new id and then
+110:13
+the only other thing would be
+110:15
+if you click the login button on click
+110:18
+login it's going to
+110:22
+call props dot login user and then
+110:26
+props dot history dot push slash means
+110:28
+it's going to
+110:30
+update the url so it just goes through
+110:33
+this other route it's going to this
+110:34
+route the slash route
+110:36
+so it's going to log in the user and
+110:39
+then it's just going to go to the home
+110:41
+page again
+110:42
+now you may be thinking wait where is
+110:44
+this login coming from is it calling
+110:46
+this login
+110:46
+no it's it's actually different this is
+110:48
+props.login
+110:50
+so if we go back to
+110:53
+what pages i think app.js
+110:57
+so if you see when we created the
+111:01
+the route the route for the login page
+111:05
+one thing we passed in as one of the
+111:08
+props we passed in as login
+111:10
+was login equals login and this login
+111:14
+is actually this login
+111:18
+so we're passing this function
+111:21
+to the login page so
+111:25
+on the login page when we do
+111:29
+props dot login and pass in the user
+111:32
+this is actually the function
+111:35
+from from the other page from from the
+111:38
+other file
+111:40
+so it's actually passing in the user
+111:44
+to this we're setting the user into this
+111:46
+file and to this
+111:47
+into this user variable and then that
+111:50
+user variable
+111:53
+through these routes see are
+111:56
+passed in to the other routes
+112:01
+so that's how we get the user from the
+112:03
+login page
+112:05
+to these other routes so let me go
+112:08
+and save this
+112:13
+and we'll go try this out so we're on
+112:16
+the login page now so click it log
+112:18
+in i'll put bo one two three
+112:22
+four and click log in now it goes back
+112:25
+to the main page if i click
+112:26
+view reviews here well look we can now
+112:29
+edit and delete this one
+112:30
+because the user and user id was bo1234
+112:34
+for this review
+112:35
+now i can delete or edit let's try
+112:38
+editing
+112:39
+oh we haven't made that page yet the
+112:42
+editing page and the add page are the
+112:45
+same
+112:45
+page so add review
+112:49
+we can try out the delete though let's
+112:51
+see if the delete works
+112:52
+yep that works and let's see if i
+112:53
+refresh if it's still deleted
+112:55
+and it's not so that did not work
+112:59
+okay so that delete didn't work and it
+113:01
+was because we're not
+113:02
+sending the the user id here
+113:06
+so the server is expecting a user id to
+113:10
+be sent with this
+113:12
+and a delete can't send
+113:16
+data in the normal way because normally
+113:19
+most people don't use a body with a
+113:21
+delete request
+113:22
+it's not necessarily best practice but
+113:25
+again
+113:25
+i'm not really focusing on
+113:27
+authentication here but what we're going
+113:29
+to do
+113:30
+to make sure this
+113:33
+to pass in the username is this we're
+113:36
+going to have to use
+113:43
+user id
+113:49
+id and when i get this user id here
+113:55
+this should be user id and now we have
+113:58
+to make sure we
+113:58
+call this with the user id
+114:02
+so if we go over to
+114:06
+where we delete something
+114:12
+we're going to pass in the user id
+114:18
+so delete reviews review id and then
+114:22
+comma props dot user.id
+114:26
+okay let's see if that works
+114:29
+i'm going to log in with bo1234
+114:36
+view reviews and let's see if i delete
+114:38
+enough i refresh it let's see if it
+114:40
+stays deleted
+114:41
+and it stays deleted so we successfully
+114:44
+deleted that review and it's deleted
+114:45
+from the database
+114:47
+now we have to create the ad review page
+114:50
+so let's go to add review here
+114:53
+now i'm going to update this code and
+114:55
+then we'll go over it
+114:58
+so it starts off like the other ones
+115:00
+react review state
+115:01
+the restaurant data service link from
+115:03
+react dom
+115:04
+and the initial review state is just
+115:07
+going to be an empty string
+115:08
+because someone's just going to type in
+115:10
+a string for the review
+115:11
+and then we're going to keep track of
+115:13
+whether this is a new review
+115:15
+or if we're editing the review like
+115:18
+i could have titled this something
+115:19
+besides ad review because we're using
+115:21
+the same page to add reviews
+115:23
+and edit reviews but the default is
+115:25
+false
+115:26
+false we are not editing the review
+115:28
+we're defaulting to adding the review if
+115:30
+we go to this page
+115:31
+so now we have to figure out if this
+115:34
+editing should become true if we are
+115:36
+editing the review the way to find out
+115:39
+if we're editing this review
+115:40
+is to see if a current review was passed
+115:42
+in
+115:43
+to this component
+115:46
+so if we go back to here if someone
+115:49
+clicks the edit review
+115:53
+it passes in this state of current
+115:56
+review
+115:57
+so we're seeing if this state has been
+115:59
+passed in
+116:01
+so first we need to see if the state
+116:03
+even exists and if it does
+116:05
+we have to check if the current review
+116:08
+is part of that state
+116:09
+if so then we'll set editing to true and
+116:12
+then we'll set the initial review state
+116:15
+to props at location state that current
+116:17
+review
+116:18
+text so that's the text of the review
+116:20
+that we're editing
+116:24
+and then we are going to create this
+116:25
+review variable
+116:27
+using the initial review state which is
+116:28
+either going to be an empty string
+116:30
+or it's going to be the text here and
+116:32
+then we're going to keep track of
+116:33
+whether the review was submitted or not
+116:36
+starting with false it hasn't been
+116:37
+submitted and this is our handle input
+116:40
+change function so when someone types
+116:42
+into the text box
+116:43
+it will change it'll set the review to
+116:45
+whatever the person typed in
+116:48
+and i can just i'll just i'll just go
+116:50
+and look at that right now
+116:52
+so first we check to see if there's a
+116:55
+user if there's no user you can't
+116:57
+actually add a review because you have
+116:58
+to be
+116:59
+logged in to add review then we're gonna
+117:02
+ch so this
+117:03
+is a ternary function if so we're gonna
+117:06
+do this
+117:07
+if not so if there is no user it's going
+117:09
+to say please log
+117:10
+in see anything after this colon here
+117:12
+it's going to say please log
+117:14
+in but if we are logged in now we're
+117:16
+going to check if it's submitted yet
+117:18
+so if it is already submitted it's going
+117:21
+to
+117:22
+do this so question mark is it submitted
+117:25
+right after this question mark is the
+117:26
+yes answer yes i'll say you submitted
+117:29
+successfully
+117:30
+and then there's going to be a link to
+117:32
+go back to the restaurant
+117:35
+so the restaurant that you started on if
+117:38
+it's not submitted yet
+117:40
+then there's going to be a form here so
+117:43
+this form
+117:44
+is going to have a description it's
+117:47
+either going to say
+117:48
+edit review or create review depending
+117:51
+on whether we're currently editing the
+117:52
+review or
+117:54
+if it's we're adding a new review so if
+117:56
+editing is
+117:57
+true it's going to say edit review if
+117:59
+editing is false that means writing a
+118:01
+new review it's going to say create
+118:02
+review
+118:04
+then the input form is going to
+118:08
+have the value of the review and then if
+118:10
+you type
+118:11
+it will update that value and then if
+118:14
+you click
+118:15
+it's going to save review if you click
+118:17
+submit
+118:19
+so this let's look at the save review
+118:21
+function
+118:22
+the save review function is going to
+118:25
+create this data
+118:26
+with the text of the review the name
+118:29
+which is the props that user.name
+118:31
+the user id props user id and the
+118:34
+restaurant id props.match.params id
+118:37
+the mass.pram's id means it's going to
+118:40
+be right from the url we're getting the
+118:42
+restaurant id
+118:43
+right from the url here and then
+118:46
+if we're editing
+118:50
+there's also going to be one more part
+118:52
+of the data
+118:53
+if we're editing the review then
+118:56
+we are going to get the review id
+119:00
+and add it to it the current review id
+119:03
+so if you're not editing there's not the
+119:06
+review doesn't have an id because it
+119:07
+doesn't
+119:08
+get an id until you create the new
+119:09
+review review but if you're already
+119:11
+editing it
+119:12
+you need the review id to say what
+119:14
+review is going to be
+119:16
+edited and then so if you're editing a
+119:18
+review
+119:20
+it's going to call update review and
+119:23
+it's going to set submitted to true
+119:25
+if you create a new review else it's
+119:28
+going to create a review
+119:30
+in both cases passing in the data in
+119:32
+both cases it's setting
+119:34
+submit to true it's logging the data
+119:38
+and that's pretty much it for the ad
+119:40
+review
+119:41
+so let's save that and then we'll test
+119:44
+it out
+119:45
+so click on restaurants we'll go to
+119:48
+happy garden this time
+119:50
+there's no reviews yet let's see if we
+119:52
+can add one well wait to log in first so
+119:54
+click login i'll click i'll do bow
+119:58
+one two three four log in and then we'll
+120:01
+go to view reviews again
+120:03
+add review and i'll say
+120:06
+worst
+120:07
+[Music]
+120:10
+restaurant ever
+120:14
+submit you submit successfully back to
+120:16
+restaurant
+120:17
+and you can see here's the review here
+120:20
+also
+120:21
+let's just confirm we haven't been to
+120:23
+mongodb atlas for a while so let's go
+120:24
+check to see if
+120:25
+it's in there so let me go back to that
+120:27
+page
+120:30
+and then we'll go to reviews here
+120:36
+loading which are refreshing
+120:46
+and let's see if we can find the review
+120:48
+i just added
+120:51
+worst restaurant ever here it is
+120:55
+so bo1234 worst restaurant ever
+120:58
+so let's go back over
+121:01
+and we can edit actually now it is the
+121:04
+best restaurant i went to it again and
+121:06
+realized i was wrong the first time
+121:08
+submit that and now it's best restaurant
+121:11
+ever
+121:11
+if i log out i can still see the review
+121:13
+but i cannot edit it and i cannot delete
+121:15
+it
+121:16
+so we can see the list of restaurants we
+121:19
+can
+121:19
+search we can search by kitchen
+121:24
+let's try that word all the kitchens we
+121:27
+can search by zip code 1001
+121:32
+we can search by cuisine
+121:35
+do brazilian
+121:38
+we can view maps
+121:46
+this one seems to be closed
+121:50
+and we can log in
+121:53
+and i'll try different name
+121:57
+how about abby and we'll do four three
+121:59
+two one
+122:02
+now i can view reviews but i can't edit
+122:04
+that one but i can add another review
+122:08
+not amazing
+122:12
+if you go back to restaurant i can
+122:14
+delete a review
+122:16
+and this is basically done
+122:19
+we've created a fully functional mern
+122:22
+stack
+122:23
+app okay we're going to do one
+122:26
+final thing we're going to update the
+122:29
+title
+122:30
+that will be on the tab or in the top
+122:32
+bar on your web browser
+122:34
+so let's go to the public tab here
+122:37
+and then we're going to or the public
+122:39
+folder i mean we go to index.html
+122:42
+and we'll keep most of this as is but we
+122:45
+will update this instead of react
+122:48
+app this is going to now say
+122:51
+restaurant reviews
+122:55
+okay we're done
+123:01
+so we finished creating our entire app
+123:04
+using
+123:05
+the mern stack using mongodb express
+123:08
+react and node.js well
+123:12
+now i'm going to show you that you don't
+123:13
+even need node.js
+123:15
+or express because you can do all of the
+123:17
+backend
+123:18
+right from mongodb realm mongodb realm
+123:21
+is a serverless application backend
+123:23
+that streamlines implementation of
+123:25
+features like user authentication
+123:27
+data validation and business logic with
+123:30
+configurable functions and services
+123:32
+that integrate realms data access and
+123:34
+security rules
+123:36
+so this is the structure of our app so
+123:38
+far
+123:39
+but we're now going to replace this e in
+123:42
+the n
+123:43
+this whole section with mongodb realm
+123:46
+and we're also going to replace this
+123:49
+section
+123:50
+and instead of hosting it locally we are
+123:52
+going to host it
+123:53
+in the cloud so this is what the new
+123:56
+structure of the app is going to look
+123:57
+like
+123:58
+see the back end is now realm and it's a
+124:01
+back end as a service
+124:03
+because it's all hosted in the cloud at
+124:05
+realm and then the front end is also
+124:07
+going to be hosted
+124:08
+through realm and it's going to be the
+124:10
+same react front-end you see the client
+124:12
+is going to look exactly the same
+124:14
+now you can see these little lock icons
+124:16
+after we get everything set up on realm
+124:19
+we're going to have a lot more security
+124:21
+between
+124:22
+the backend and the front end of the
+124:23
+database and the client
+124:25
+so let's start setting this up so we are
+124:28
+going to
+124:29
+completely remove the backend that we
+124:31
+made with node.js in express
+124:33
+and i'm going to show you how to
+124:35
+implement that all with realm
+124:37
+and it's way easier and way faster than
+124:40
+creating that whole back end with no
+124:42
+node in express so we'll still be using
+124:44
+the same
+124:45
+react front end but i'm going to show
+124:47
+you how to just use that front end
+124:50
+with the realm back end and after that
+124:53
+i'm going to show you how you can use
+124:54
+mongodb realm to host the front end as
+124:58
+well
+124:58
+so the front end and back end will be
+125:01
+all hosted in the cloud
+125:03
+on mongodb realm so let's get started
+125:07
+first i'm going to show you how to use
+125:09
+realm to create an api that exposes data
+125:12
+and then i'll show you how to update
+125:13
+data in a mongodb database
+125:15
+inside mongodb atlas so first let's go
+125:19
+we're we're starting in our mongodb
+125:20
+atlas cluster
+125:22
+and then we'll go to the realm tab right
+125:24
+here
+125:26
+okay it automatically goes into the
+125:28
+create a new application
+125:30
+section but if you have already been
+125:33
+to if you already have an application
+125:35
+you may just have to click the create
+125:36
+new application button to get to the
+125:38
+screen
+125:39
+but we're going to call this
+125:42
+restaurant reviews
+125:50
+and then i'll just click create realm
+125:51
+application and i don't need any of
+125:54
+these guides here
+125:56
+okay we got this set up and
+125:59
+realm has a bunch of features and we're
+126:02
+only going to scratch the surface of
+126:04
+what it can do
+126:05
+so you can look through all these things
+126:07
+over here
+126:09
+we're actually going to mainly focus on
+126:11
+third-party services
+126:12
+and then later when we want to host our
+126:14
+front end we're going to go to
+126:16
+hosting but you can kind of play or just
+126:19
+look around in here and see the
+126:20
+different
+126:21
+things that it can do but we're going to
+126:23
+start off by just going to third party
+126:25
+services here
+126:27
+exposing data through third party
+126:28
+services is at the heart of creating a
+126:30
+realm back in service
+126:31
+so that's what we're going to create now
+126:33
+this is going to allow us to update the
+126:35
+data outside of this website
+126:37
+we'll basically be creating the the
+126:38
+wrapper for an api
+126:40
+so let's add a service
+126:43
+we are going to create a service called
+126:46
+http
+126:47
+now there's some built-in you can choose
+126:49
+twilio github aws depending on
+126:52
+what type of api you're trying to
+126:55
+connect
+126:55
+or create or what type of service you're
+126:57
+going to create but for our purpose
+126:59
+we're just
+126:59
+doing an http service and i'm just going
+127:02
+to call this restaurants
+127:06
+and then i'll click add service
+127:09
+okay now i'm going to click add
+127:12
+incoming webhook this is what's going to
+127:16
+expose this service
+127:17
+to the outside world on the internet so
+127:21
+we're in the settings first we're going
+127:22
+to look at that first and this is going
+127:24
+to
+127:25
+this will specify the authentication
+127:28
+requirements and other behaviors
+127:30
+i'm just gonna call this restaurants and
+127:33
+this name
+127:34
+is basically going to be one of our api
+127:37
+endpoints so each
+127:38
+name the each web hook or wait each name
+127:41
+is going to be a different api
+127:42
+endpoint that our front end is going to
+127:44
+access
+127:46
+if you scroll down here a little bit you
+127:48
+can see that you can choose the http
+127:50
+method
+127:51
+we can we have to actually create a
+127:53
+different service for each type of http
+127:55
+method like get
+127:56
+post put delete so the most popular type
+128:00
+is a get request so this first one we're
+128:01
+going to make a get request
+128:03
+this is going to be so we have the
+128:05
+different apa endpoints
+128:06
+we're going to recreate all the api
+128:09
+endpoints from
+128:10
+our node express server right from realm
+128:13
+and the first one we're going to create
+128:14
+is the one that's going to return a list
+128:17
+of all the restaurants
+128:19
+you can also set up different types of
+128:21
+authentication here
+128:23
+or authorization for the request
+128:26
+but since this is a pretty uh basic
+128:28
+tutorial i'm just trying to show you how
+128:30
+to do the basics here so we're not going
+128:31
+to get into
+128:32
+authentication but one cool thing
+128:35
+is that mongodb realm can it
+128:39
+makes it easy to either create your own
+128:42
+authentication
+128:43
+or also hook up with the a google
+128:46
+authentication or facebook
+128:47
+authentication
+128:49
+and so you can use that those
+128:51
+authentication pages to authenticate
+128:53
+for your mongodb realm app we're not
+128:56
+going to
+128:56
+go get into that today but i just want
+128:58
+you to know that that's a possibility
+129:00
+for now we're not even going to
+129:02
+implement any authentication because i
+129:04
+just want to want you to see
+129:05
+the basics of how this works request
+129:07
+validation is important to verify
+129:09
+requests
+129:10
+it helps fight against bots that may
+129:12
+attempt to interact with your service
+129:13
+an easy way to implement this is to
+129:16
+require secret
+129:17
+this is just a git argument it's a
+129:19
+parameter that's appended to the call
+129:21
+then request will only be processed if
+129:23
+they include the secret
+129:25
+but for now we're just going to do no
+129:27
+additional authorization
+129:29
+and i'm going to click the save button
+129:34
+so now it brings us over to the function
+129:36
+editor by the way when you click the
+129:37
+save button it actually doesn't
+129:39
+deploy anything it doesn't make anything
+129:41
+live until you click the review and
+129:43
+deploy
+129:44
+a button so that's where you can save a
+129:46
+bunch of things and then deploy
+129:47
+everything all at once you may have
+129:49
+multiple changes and then you can deploy
+129:51
+all of them
+129:52
+but we're not going to deploy yet
+129:54
+because we have to create our
+129:56
+function so we're just on the settings
+129:58
+tab right here but now
+129:59
+once we click save it automatically went
+130:01
+over to this function editor so now
+130:02
+we're on the function editor
+130:04
+and this is the function that will be
+130:06
+run when someone
+130:07
+calls the api to call this api
+130:11
+or to send a message to this api
+130:13
+endpoint it's just this
+130:14
+url here so this url
+130:18
+is what we are going to use that our
+130:20
+front end
+130:21
+is going to send a get request to this
+130:24
+url
+130:26
+and then this function will be run so
+130:28
+this function
+130:29
+is basically just like the function from
+130:32
+our node express server or it will be
+130:34
+once we finish creating it
+130:36
+this is just an example when you when
+130:39
+you first create
+130:40
+one of these services it will
+130:42
+automatically put this code in
+130:44
+as a function as an example but we're
+130:46
+going to update all this
+130:47
+to create a function that's very similar
+130:50
+to our node express backend
+130:52
+okay so first i'll just show you how to
+130:55
+create
+130:56
+a very simple response and then we'll
+130:58
+make it a little more
+130:59
+complicated so we're going to actually
+131:03
+get rid of most of the stuff but let me
+131:04
+just show you this so this is how you
+131:06
+get
+131:06
+query parameters so payload.query is
+131:10
+going to be these arguments right here
+131:12
+and then you can
+131:14
+get the content types with
+131:15
+payload.headers you can get the body
+131:17
+with payload.body
+131:19
+and then this is just kind of showing
+131:20
+how you would log that information here
+131:22
+so these are all just examples here but
+131:24
+what we want to do
+131:26
+for now i'm going to just delete
+131:30
+all of this here
+131:34
+[Music]
+131:36
+and what we're going to do is just try
+131:38
+to
+131:39
+get remember we're we're trying to
+131:40
+return a list of restaurants
+131:43
+so what i want to do is just get that
+131:46
+collection we need to get access to
+131:48
+our collection our restaurants
+131:50
+collection right from this function
+131:53
+so let's make a variable const
+131:54
+collection
+131:57
+equals when you're creating a function
+131:59
+you're always going to have access to a
+132:01
+variable called
+132:02
+context and if you do context.services
+132:08
+we're going to get the get mongodb atlas
+132:14
+[Music]
+132:16
+now this is just how you're going to get
+132:17
+a your database on mongodb
+132:20
+d atlas and then we put db
+132:24
+sample restaurants
+132:29
+remember that's the name of our database
+132:33
+that collection and the collection is
+132:35
+just called restaurants
+132:41
+okay now let's get the list of
+132:42
+restaurants so let
+132:44
+restaurants list and this is going to be
+132:47
+very similar to the mongodb javascript
+132:49
+driver restaurants
+132:53
+list equals
+132:57
+now we're just going to do await
+133:01
+collection dot find
+133:05
+dot to array
+133:08
+[Music]
+133:10
+so this is just going to create an array
+133:12
+of our entire collection
+133:14
+for this example we don't want to return
+133:16
+the entire collection
+133:18
+let's limit so we're just going to limit
+133:20
+to 20
+133:21
+dot limit
+133:25
+limit and then i'll put 20.
+133:30
+and then i'm going to return the
+133:32
+restaurant list
+133:34
+[Music]
+133:36
+and since we're using a weight right
+133:37
+here we're going to make this in a sync
+133:39
+function
+133:40
+so async and then
+133:44
+we can just click the run button it's
+133:46
+going to open up the console
+133:47
+and then we have the results right here
+133:50
+and if i lift this up here
+133:54
+look we got it right here this is the
+133:56
+list of restaurants so if i just scroll
+133:58
+all the way up to the top
+134:00
+we can see riviera carter
+134:04
+so that's the first restaurant and so
+134:06
+this is the list of restaurants
+134:08
+just the first 20 because we've limited
+134:11
+it to 20.
+134:13
+so now we could actually just put
+134:16
+in this url right into our react
+134:19
+front end and if we call this url it'll
+134:22
+return that list of restaurants
+134:23
+but we're not going to update our react
+134:25
+code to use that url quite yet
+134:27
+what we're going to do is actually just
+134:29
+test this in insomnia
+134:31
+so make sure you save your own function
+134:34
+and then we can test this out so let's
+134:35
+click review and deploy
+134:37
+and the settings in atlas have a
+134:40
+configuration driven approach
+134:42
+so before we finalize this deploy you
+134:44
+can see the settings that we're about to
+134:46
+change
+134:47
+this is also the command you would use
+134:48
+in a terminal or a program so you can
+134:51
+avoid using this interface in this user
+134:53
+interface
+134:54
+but we're just going to use the user
+134:55
+interface so hit deploy here
+134:59
+okay deployment was successful so we'll
+135:02
+go over here
+135:03
+and then i already have the url in here
+135:05
+this is our url right from
+135:06
+our mongodb web hook in realm and if i
+135:10
+click send
+135:12
+it's going to see we have our list of
+135:15
+restaurants right here
+135:17
+so it worked now we're about to use that
+135:20
+same url in our react app
+135:22
+but before we do that let's improve this
+135:25
+function a little bit
+135:26
+we want this function to also be able to
+135:29
+be used for searches
+135:30
+so this api endpoint will be able to
+135:32
+return all the restaurants
+135:34
+but also if someone does a search for a
+135:35
+zip code or
+135:37
+a title or a
+135:40
+cuisine it will also return the search
+135:42
+results for that
+135:43
+so let's go back to our code now this is
+135:46
+our back-end code this is the
+135:49
+restaurants.controller
+135:51
+and we're just going to actually copy
+135:53
+this code
+135:54
+and then make a few changes
+135:57
+and then we'll go right back into our
+136:00
+function editor
+136:02
+and then i'm going to paste the code in
+136:03
+here
+136:05
+but we're going to make some changes so
+136:06
+it works for our purposes here
+136:08
+so first of all first of all let's move
+136:11
+this down a bit
+136:15
+i'm just going to move it just paste it
+136:17
+in right here
+136:18
+and then let's start at the top here you
+136:20
+can see we're getting the restaurants
+136:22
+per page and we're getting the page
+136:24
+from the query parameter well there's a
+136:27
+different way for to do this
+136:28
+in this function here we're going to be
+136:30
+using payload.query
+136:32
+we're going to have restaurants per page
+136:34
+and we're going to have the page
+136:37
+and let's do some destructuring here
+136:44
+equals payload dot query
+136:48
+okay so that's how we're gonna get the
+136:50
+restaurants for page in the page and
+136:51
+we'll have some default parameters
+136:53
+so default to 20 and
+136:57
+default to zero so if it doesn't have
+137:00
+resonance for page if it doesn't have
+137:01
+page
+137:01
+we'll just default to those numbers
+137:05
+and we're going to build up instead of
+137:07
+building up
+137:08
+the filters we're just going to build up
+137:10
+the query
+137:11
+the query that we're going to send when
+137:14
+we do our find here
+137:16
+so wreck that query we're going to use
+137:19
+payload.query
+137:20
+and then we're going to set the query
+137:24
+to equal well we can get the query
+137:28
+right from our other code so we just
+137:30
+have to go
+137:31
+over to the restaurants deo
+137:36
+and this is what the query looks like
+137:39
+for the cuisine query it's going to look
+137:41
+just like this
+137:43
+now bring that over and instead of
+137:46
+filters cuisine
+137:48
+this is just going to change to
+137:52
+payload.query.cuisine
+137:54
+so you can kind of see we are taking our
+137:56
+code from two different files
+137:58
+the restaurants controller and the
+138:00
+restaurants deo and we're combining them
+138:02
+all together
+138:03
+into our function so the next thing
+138:06
+we're going to be doing
+138:07
+is getting our search for the name
+138:10
+filter well let's do zip code let's the
+138:13
+next thing we're going to do is get the
+138:14
+zip code one i'll just copy this whole
+138:16
+thing from here
+138:18
+bring it over and then we'll use zip
+138:21
+code
+138:22
+and then this is just going to be
+138:25
+payload
+138:26
+dot query dot zip code
+138:34
+and then the final thing is just going
+138:35
+to be the name one
+138:45
+just paste that in there
+138:51
+so this is going to be payload dot
+138:55
+query dot name
+138:59
+and to make a text search look work like
+139:02
+this
+139:02
+we have to i already created a text
+139:05
+index
+139:06
+so if you just like skip right to this
+139:08
+part of this video you may not have seen
+139:09
+how i made that text index
+139:11
+but in mongodb atlas if you create you
+139:14
+can create an
+139:15
+index based on any field
+139:18
+where you could do a full text search
+139:20
+for any field
+139:21
+and i did the search for the name field
+139:24
+in our database i created an index for
+139:26
+the name field in our in our database
+139:28
+so we could do a text search of that
+139:30
+field okay so
+139:31
+we develop our query we're going to get
+139:34
+an access to our collection
+139:36
+and then we're going to get our
+139:37
+restaurants list but let's add a few
+139:40
+things here so find
+139:42
+out we're going to put the query in here
+139:44
+because we're going to find based on the
+139:46
+query
+139:47
+and we also want to get a certain page
+139:50
+number
+139:50
+okay because p we passed in the page
+139:53
+number
+139:54
+and to get the page number it's going to
+139:56
+be
+139:58
+skip and then we're going to do a
+140:01
+calculation here
+140:02
+page times restaurants
+140:06
+per page and then
+140:10
+we're going to limit that to we're not
+140:12
+going to limit that to 20 anymore we're
+140:14
+going to limit that to restaurants per
+140:15
+page
+140:17
+and then we keep we're keeping the two
+140:19
+array and then i don't need this anymore
+140:22
+before we send the response we are going
+140:24
+to have to update something
+140:26
+in the database all the ids are object
+140:28
+ids and we want to create
+140:30
+we want to return them as a string
+140:32
+instead of an object id
+140:33
+so we can just loop through the entire
+140:36
+restaurant list and update
+140:38
+all the ids to strings and se instead of
+140:40
+the object ids
+140:42
+so i'll do restaurants
+140:46
+dot 4 each and then for every restaurant
+140:57
+we're going to call this function
+141:00
+and the function is just going to be
+141:02
+restaurant
+141:06
+dot underscore id equals restaurant
+141:12
+dot underscore id dot to
+141:15
+string okay
+141:18
+and the final thing is that we're going
+141:20
+to create this response
+141:22
+but we're going to now call this
+141:24
+response
+141:26
+data and restaurants is still going to
+141:30
+be restaurants list
+141:31
+page will be paged and then we'll just
+141:34
+convert that to a string
+141:39
+the filters in this case we're just not
+141:42
+going to return anything for the filters
+141:44
+we'll just return
+141:45
+an empty object because in their front
+141:49
+end we don't even use the filters we
+141:50
+don't
+141:51
+we don't even keep track of the filters
+141:52
+on the front end and then for the
+141:54
+entries per page we'll do restaurants
+141:56
+per page and then convert that to a
+141:58
+string
+142:01
+and then for the total results we'll do
+142:08
+restaurants list dot
+142:12
+length dot to string
+142:18
+and then we'll return response data
+142:26
+okay let's save this
+142:29
+and then well let's just do a test we'll
+142:32
+run this
+142:35
+it says rec not define looks like we
+142:37
+must have made a mistake up here
+142:40
+somewhere
+142:41
+what do we still have
+142:47
+oh this should be i forgot to change
+142:49
+this payload
+142:54
+payload
+142:55
+[Music]
+142:57
+and then we'll try doing a test here
+143:01
+restaurants is not defined what do we
+143:04
+must have made a spelling error
+143:06
+oh okay restaurants
+143:09
+list for each okay so let's run that
+143:14
+and then we get the result now we can
+143:17
+actually
+143:18
+test sending the print the query
+143:20
+parameters right in here
+143:21
+so let's go to the console
+143:25
+and this is how you would test sending
+143:27
+the parameters you can actually
+143:29
+test sending parameters by using these
+143:30
+right here so it has an example here
+143:32
+so i'm going to send a page
+143:38
+and i'm going to send it to 2 and
+143:41
+i'm going to do name
+143:45
+and set that to
+143:48
+food so now we're going to be searching
+143:51
+for by name
+143:52
+and we're going to be searching doing
+143:55
+the page 2.
+143:56
+so let's try that
+144:01
+okay well first of all you can see that
+144:03
+it returned
+144:04
+page two and if i go back up here
+144:09
+let's see the restaurant names and let's
+144:12
+scroll up and look oh see
+144:13
+this restaurant name has the word food
+144:15
+in it let's see another restaurant name
+144:17
+this restaurant had the name food in it
+144:20
+so that worked
+144:21
+i did this is a good thing about testing
+144:23
+this we can see if there's any mistakes
+144:25
+and i need to notice this this total
+144:27
+result is 20
+144:29
+so it's not well i wanted to return the
+144:32
+total results of this
+144:34
+find of with the query but it's actually
+144:37
+giving us the total results
+144:39
+after we've limited to restaurants per
+144:42
+page
+144:43
+so there's a few ways we can do this
+144:45
+okay so what we're going to do
+144:47
+is just copy this here
+144:50
+come down here and then the total
+144:53
+results
+144:54
+is just going to be okay i'm going to
+144:56
+change this find to count
+144:59
+dot then
+145:03
+num num dot 2 string
+145:08
+run okay good we got the right
+145:11
+total results we'll make sure we're
+145:14
+saved
+145:17
+and then make sure we deploy
+145:22
+and we got that function done let's try
+145:24
+adding this to
+145:25
+our react app so let's go back into the
+145:28
+settings
+145:29
+so let's get our url go back to our code
+145:33
+and then i'm going to go back go into
+145:36
+our front end code
+145:38
+so our front end code we're going to
+145:40
+need to go into
+145:41
+our where is our
+145:45
+http common so here's our base
+145:48
+url we're going to update this base url
+145:52
+and i'm just gonna
+145:52
+paste in this url ascot
+145:57
+and i'm gonna take off this section here
+146:00
+where it says restaurants
+146:02
+okay i'm gonna say that and go into our
+146:04
+services
+146:06
+and then this file
+146:10
+are of all of our api calls so get
+146:14
+all i'm just going to put
+146:17
+restaurants here and then
+146:20
+the search should also work if i just
+146:23
+put restaurants here so those are the
+146:25
+two ones that we've updated
+146:27
+this the restaurants the thing where
+146:31
+you're going to get everything and we're
+146:32
+going
+146:33
+find specific restaurants so let me save
+146:36
+that
+146:38
+okay let's try it and it works in to
+146:42
+prove that it's working
+146:43
+i'm gonna open up my console i'm gonna
+146:46
+go to my
+146:48
+network i'm going to refresh here
+146:53
+let me zoom in on this if i go to
+146:56
+restaurants here and if i hover over
+146:59
+you can see it's our url it's our
+147:01
+mongodb realm
+147:03
+url and you can see the cuisines doesn't
+147:06
+work because we haven't implemented that
+147:08
+endpoint yet so let's implement the
+147:11
+cuisines
+147:11
+endpoint right now and by the way all
+147:14
+the other endpoints are going to be way
+147:16
+easier we started with the hardest one
+147:18
+with all the searches and stuff
+147:19
+well let's test that first so let's test
+147:22
+to see if that works
+147:23
+so let's type in food search
+147:26
+look all about food feel food now let's
+147:29
+try the zip code
+147:30
+search one zero zero one
+147:33
+four search and yep
+147:36
+all the zip codes are one zero zero one
+147:38
+four so that works
+147:39
+i assume the cuisine search is gonna
+147:41
+work but we're gonna have to implement
+147:43
+our cuisine's endpoint first so we'll
+147:45
+pull that in
+147:46
+so to implement a new api endpoint
+147:50
+i'm going to go back to here
+147:53
+and then i'm going to add an incoming
+147:56
+web book so we have the restaurants
+147:57
+webhook
+147:59
+now i'm going to add another one and
+148:02
+this one is going to
+148:03
+be called cuisines
+148:06
+and everything else is basically going
+148:08
+to be the same here
+148:09
+oh it's going to be a get request okay
+148:13
+let me go over to the function editor
+148:16
+now if you're in the github repository
+148:18
+there's actually a folder called realm
+148:21
+that has the code for all the functions
+148:24
+so the rest of these functions i'm just
+148:25
+going to paste in here
+148:27
+and then i can just go over it again
+148:29
+it's going to be way easier these are
+148:30
+all going to be way easier than the last
+148:32
+ones
+148:33
+but all this code is basically just a
+148:36
+modified version
+148:37
+of the code that was in our node express
+148:40
+backend
+148:41
+and i just modified it to use this thing
+148:43
+specific to
+148:44
+realm like the context.services
+148:48
+and basically this is pretty
+148:50
+straightforward we get the collection
+148:52
+and then a weight await
+148:53
+collection.distinct cuisine and return
+148:55
+the cuisines
+148:56
+so let me save that and then i'll review
+149:00
+and deploy that
+149:03
+and now let's just update back in our
+149:06
+react front end let's
+149:08
+update the get cuisines
+149:13
+and actually that should be right it's
+149:15
+just going to have slash cuisines
+149:16
+at the end if we go back to our settings
+149:20
+and we go to the url we can kind of
+149:22
+confirm that
+149:23
+see yeah it just ends with slash
+149:25
+cuisines our main url
+149:27
+ends at incoming web books and then has
+149:29
+cuisines at the end
+149:30
+so let's test that i'll refresh this
+149:32
+page here
+149:34
+and now we have all these cuisines it
+149:36
+comes in
+149:37
+and we can do a search yep we got the
+149:41
+chicken cuisine
+149:42
+and let me just make sure right from
+149:45
+our networks so if i refresh here
+149:48
+and we can see the cuisines is actually
+149:51
+coming
+149:51
+right from the mongodb round website so
+149:54
+that
+149:55
+that web hook is working okay let's
+149:58
+implement
+149:58
+all the rest of them so to see which
+150:01
+ones we still need to implement we can
+150:02
+go back over here
+150:04
+so we need the get one which is
+150:07
+slash id and then with the id
+150:10
+right in there we need the crate review
+150:13
+we need the update review
+150:15
+we need the delete review and then
+150:18
+we'll be done so let's do this one first
+150:20
+where we're going to get a
+150:21
+single review where we're going to get a
+150:24
+single restaurant with all of the
+150:25
+reviews
+150:27
+so click add incoming web hook this is
+150:29
+going to be just called restaurant
+150:32
+singular not plural and this is also
+150:35
+going to be a get request
+150:37
+pretty soon we're going to do a post one
+150:38
+but this one's a get request
+150:40
+go to the function editor let me save
+150:42
+that
+150:45
+you can see there's an asterisk there
+150:46
+now there's not because it's saved
+150:48
+and now i'm going to update this code
+150:50
+again you can just copy the code right
+150:52
+from the github repository if you're
+150:54
+trying to follow along here
+150:56
+so let's look at some of things that are
+150:58
+specific to
+151:00
+mongodb realm we have the
+151:02
+payload.query.id
+151:04
+so one thing tricky for this one this
+151:07
+one uses a
+151:08
+path parameter so right in the url as
+151:11
+part of the url there's this
+151:13
+parameter so it's id slash
+151:16
+and then it's the the id
+151:20
+the actual id then we get that path
+151:22
+parameter
+151:23
+to look up the id that's how it is in
+151:25
+the node express backend
+151:27
+so that's one thing kind of different on
+151:30
+realm is that it cannot do a path
+151:33
+parameter it cannot get a path parameter
+151:34
+it can only get a query parameter
+151:36
+so we're going to have to switch this to
+151:38
+a query parameter
+151:39
+so a query parameter is something that's
+151:41
+after a question mark
+151:43
+so it's in the url after a question
+151:44
+marks me a query parameter
+151:46
+if it's just after a slash just like
+151:48
+this it's going to be a path parameter
+151:50
+so we have to change the path parameter
+151:52
+to a query parameter
+151:54
+and it's going to be a query parameter
+151:55
+called id and so we're going to do
+151:58
+something else in react
+151:59
+to make it a query parameter instead of
+152:02
+a path parameter
+152:03
+but it'll be pretty simple i'll show you
+152:05
+when we get to that point and so we get
+152:07
+a list of the the restaurants just like
+152:10
+before
+152:10
+and then this pipeline this is basically
+152:13
+just copy and pasted right from our
+152:15
+express app
+152:16
+to get a list of all the reviews so you
+152:19
+know we're
+152:20
+we're sending it the rest a single
+152:22
+individual restaurant but then we have
+152:23
+to go to the reviews collection to get
+152:25
+all the reviews so that's what this
+152:28
+pipeline does and then
+152:31
+this is all this information is
+152:33
+basically very similar to our express
+152:35
+app
+152:36
+and then right here we're converting
+152:39
+we're going through each review
+152:41
+and we're converting the date to a
+152:43
+string
+152:44
+and we're converting the id to a string
+152:47
+if we don't do that
+152:49
+our react app won't work with it
+152:51
+correctly
+152:52
+okay i'll save that and then i'll just
+152:56
+do review and deploy
+152:58
+and then we have to deploy here
+153:02
+so if we go to our url it's just going
+153:05
+to end with
+153:06
+restaurant so let's see how we have to
+153:08
+change the path parameter
+153:10
+to a query parameter
+153:14
+so it no longer is going to be id here
+153:18
+this is going to be restaurant
+153:22
+and we're going to get rid of this slash
+153:24
+here because now it's going to be a
+153:26
+query parameter which is pretty simple
+153:28
+we're going to do
+153:29
+question mark id equals
+153:33
+and now we change the path parameter to
+153:35
+a query parameter
+153:37
+so save that and now let's
+153:40
+test it in our browser okay i'll just
+153:43
+use leave this network tab open
+153:46
+and i'll click view reviews
+153:49
+and let's see okay it's getting
+153:53
+our restaurant is coming right from our
+153:54
+mongodb realm
+153:57
+api so that worked and we even got the
+153:59
+review here
+154:00
+so that worked too so now the final
+154:03
+things are
+154:05
+adding reviews editing reviews and
+154:07
+deleting reviews
+154:08
+so let me go back to the list of all our
+154:11
+web hooks
+154:12
+i'm going to add an incoming web hook
+154:15
+i'll call
+154:16
+it review
+154:20
+new and we're finally going to be using
+154:24
+a post request here
+154:26
+instead of a get request go to the
+154:28
+function editor
+154:32
+and then i'm going to paste in some code
+154:34
+here and now we're finally using the
+154:36
+body
+154:37
+so the body of the request payload.body
+154:41
+if at first it checks if there is a body
+154:43
+and if there
+154:44
+is a body this is how we have to get it
+154:47
+from the payload body that was sent to
+154:49
+this web hook
+154:50
+we'll get the text and then we'll have
+154:52
+to convert it
+154:53
+from bson to an e json object
+154:57
+e json is basically json with a few
+154:59
+extra types
+155:01
+this body includes the name user id and
+155:04
+the other data sent to this web hook
+155:06
+so this is something kind of specific to
+155:10
+mongodb atlas for realm but we got the
+155:13
+body
+155:14
+and then we have to get a list of the
+155:16
+review or
+155:17
+not a list but we have to get the
+155:18
+reviews collection a reference reference
+155:20
+to the reviews collection
+155:21
+and then we have to create our document
+155:23
+that we're going to insert
+155:24
+with by name by.user.i user underscore
+155:27
+id
+155:28
+a new date body.txt and now we're
+155:31
+converting this
+155:33
+string to an object id with bson.object
+155:37
+id
+155:38
+and then we are just inserting it into
+155:40
+their database
+155:41
+await reviews.insert one review doc so
+155:44
+that's pretty straightforward
+155:46
+and i'll save that and deploy it
+155:49
+and we're not going to put into our
+155:50
+react app yet let's just create all of
+155:52
+these and then we'll put them all into
+155:54
+our react
+155:54
+app so add incoming web hook
+155:58
+this is going to be the editing one so
+155:59
+review edit
+156:02
+and then this is going to be a put
+156:07
+save that function editor
+156:12
+i'll paste that in and it's
+156:15
+pretty similar to the last one we check
+156:17
+to see if there's a body
+156:19
+and we get we get the body into this
+156:21
+variable here we get a reference to the
+156:23
+reviews
+156:24
+we create a new date and then
+156:28
+we update so reviews.update1
+156:31
+first we have to just like in our
+156:34
+express app
+156:35
+we're searching for the one to update by
+156:38
+the
+156:38
+id which we do have to convert to an
+156:41
+object id here
+156:42
+and we also are making sure that the
+156:44
+user id is the same as the id that
+156:47
+created
+156:48
+that review and then we just have to
+156:51
+update the
+156:52
+text and the date and then we return the
+156:55
+update response
+156:56
+so save that view and deploy
+157:00
+now i actually don't have to be
+157:02
+deploying this each time i can create
+157:04
+all of them
+157:06
+at once and then deploy it but it's good
+157:08
+to kind of get in the habit or you'll
+157:10
+just forget to deploy then you won't be
+157:11
+able to figure out what the error is
+157:13
+okay this is the final web hook that
+157:15
+we're creating and it's going to be
+157:17
+review delete
+157:21
+and this will be a delete request here
+157:25
+and then function editor i'm just going
+157:27
+to paste in the code again
+157:30
+keep in mind there's no authentication
+157:32
+on this function
+157:33
+so this is there's this is not for use
+157:35
+in a
+157:36
+production environment it's just an
+157:38
+example to see how
+157:39
+how this thing would work because you're
+157:42
+probably going to want to have some
+157:43
+authentication before someone's able to
+157:45
+delete
+157:46
+something obviously in a production
+157:48
+environment
+157:49
+but let's just let me just we'll just do
+157:52
+it this way for now and we can see if it
+157:53
+works
+157:54
+so we'll just save and we'll review and
+157:58
+deploy
+158:00
+okay let's update our react app with the
+158:04
+new urls
+158:06
+so this review is going to review
+158:10
+new and an update review is review
+158:14
+edit and then delete review
+158:19
+is review
+158:26
+delete
+158:28
+that should be done let's test it
+158:32
+okay let me log in here
+158:38
+view reviews and review
+158:42
+best ever today
+158:47
+okay submit back to restaurant
+158:52
+let's see if i can edit it and let me
+158:54
+just check the network tab so i can see
+158:56
+where the requests are going to so edit
+158:58
+and the best ever yesterday
+159:03
+submit and then you can see yep it uses
+159:06
+mongodb realm
+159:09
+okay let's see if it deletes right and
+159:11
+deleted
+159:12
+and yep it's at the restaurant view it's
+159:15
+it's the mongodb
+159:16
+realm url and we're able to successfully
+159:18
+delete
+159:19
+so we just created the entire
+159:24
+node express backend all in mongodb
+159:27
+realm and it was way quicker it didn't
+159:30
+really take that long to
+159:32
+to put it all together and now it's all
+159:34
+in the
+159:35
+cloud it's and it's connected right to
+159:37
+our mongodb database
+159:39
+it's just a lot simpler way to create a
+159:42
+merge stack app
+159:43
+basically a merge stack app without the
+159:45
+e and the n
+159:50
+and now i'm going to show you how you
+159:52
+can very simply and
+159:54
+quickly host your react front end
+159:57
+right from db realm and it's
+160:00
+completely free
+160:03
+okay if you still have your react app
+160:05
+running stop that
+160:07
+and i'm in the directory for the react
+160:09
+app the front end directory
+160:11
+and i'm just going to do npm run build
+160:16
+and this is going to create a build
+160:18
+directory that we can
+160:20
+upload directly to mongodb realm
+160:24
+okay back in realm let's see where we're
+160:26
+going to upload our frontend
+160:28
+well look at this section right here
+160:30
+hosting
+160:31
+so click hosting host your website here
+160:35
+enable hosting
+160:39
+now i just have to drag over my build
+160:41
+folder
+160:42
+right over to here okay so i'm just
+160:45
+gonna grab
+160:46
+select all the files in my build folder
+160:49
+not the folder itself just the files in
+160:51
+the build folder
+160:52
+i'm just going to drag them over here
+160:54
+and then they will upload
+160:59
+i can overwrite index.html
+161:02
+and then after they're uploaded i'll
+161:04
+just click review and deploy
+161:07
+deploy and it deployed was successful
+161:12
+and it says your site is in the process
+161:14
+of being created which may take up to 15
+161:16
+minutes
+161:16
+so it could take a little while before
+161:18
+you're able to access the site
+161:20
+but it has the url right here so we'll
+161:23
+just go right to this url
+161:25
+but first let's go into the settings and
+161:26
+look at some of the settings
+161:28
+so you can actually use a custom domain
+161:31
+so you can use any domain you like
+161:33
+i'm not going to go through those
+161:35
+instructions here but if you just click
+161:36
+view
+161:37
+instructions it's going to show you
+161:39
+everything you need to know
+161:40
+to how to use your custom domain
+161:44
+so i'm just going to copy this url here
+161:49
+and look it already works i just went to
+161:51
+the url and it's hosting
+161:53
+my react app right on here and let's see
+161:56
+if we can do a
+161:58
+search how about ice
+162:02
+okay everything that the names that have
+162:05
+ice
+162:06
+we can try a cuisine
+162:09
+that works let's see if we can do a
+162:12
+review
+162:12
+first of all i'm going to go to all
+162:14
+cuisines
+162:17
+and we'll do happy garden
+162:20
+add review oh login
+162:24
+oh one two three four oops
+162:28
+one two three four
+162:40
+and we can edit it
+162:43
+[Music]
+162:47
+and this is all working everything
+162:50
+that you're seeing including the front
+162:52
+end the back end
+162:53
+the database it's all through mongodb
+162:56
+and mongodb
+162:57
+realm and even delete works
+163:01
+it's done our entire app is hosted
+163:05
+for free in the cloud everything
+163:09
+about our mirnstack app is hosted for
+163:11
+free in the cloud through mongodb
+163:12
+and mongodb realm well thanks for
+163:15
+watching everybody
+163:16
+remember to use your code for good
