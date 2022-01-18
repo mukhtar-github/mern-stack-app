@@ -1,8 +1,6 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+function AddReview() {
   return (
     <div className="App">
       Hello World!
@@ -10,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default AddReview;
