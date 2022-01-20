@@ -1,13 +1,23 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurants";
 import RestaurantsList from "./components/restaurants-list";
 import Login from "./components/login";
 
 function App() {
+  const [user, setUser] = React.useState(null);
+
+  async function login(user = null) {
+    setUser(user);
+  }
+
+  async function logout() {
+    setUser(null)
+  }
+
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
@@ -30,14 +40,15 @@ function App() {
               Login
             </Link>
             )}
-            
+
           </li>
         </div>
       </nav>
 
       <div className="container mt-3">
-        <Switch>
-          <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
+      <BrowserRouter>
+      <Routes>
+          <Route path={['/welcome', "/restaurants"]} element={RestaurantsList} />
           <Route 
             path="/restaurants/:id/review"
             render={(props) => (
@@ -56,7 +67,8 @@ function App() {
               <Login {...props} login={login} />
             )}
           />
-        </Switch>
+        </Routes>
+      </BrowserRouter>
       </div>
     </div>
   );
