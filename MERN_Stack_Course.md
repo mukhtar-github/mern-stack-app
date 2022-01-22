@@ -780,11 +780,7 @@ So let's go really quick over the *html* that we're creating. Now we're making h
     value={searchName}
     onChange={onChangeSearchName}
 />
-```
 
-The first one is *searching by name in an input box, which is going to say search by name -- placeholder="Search by name", and the value is going to be the -- value={searchName}, and onChange is going to be -- onChange={onChangeSearchName}.* So as soon as *someone types something, it gets set as the name.*
-
-```javascript
 <button
     className="btn btn-outline-secondary"
     type="button"
@@ -792,7 +788,7 @@ The first one is *searching by name in an input box, which is going to say searc
 > Search </button>
 ```
 
-And then we have the *button.* So if someone *clicks this button, an onClick is going to findByName.*
+The first one is *searching by name in an input box, which is going to say search by name -- placeholder="Search by name", and the value is going to be the -- value={searchName}, and onChange is going to be -- onChange={onChangeSearchName}.* So as soon as *someone types something, it gets set as the name.* And then we have the *button.* So if someone *clicks the button, an onClick is going to findByName.*
 
 ```javascript
 <input
@@ -802,9 +798,15 @@ And then we have the *button.* So if someone *clicks this button, an onClick is 
     value={searchZip}
     onChange={onChangeSearchZip}
 />
+
+<button
+    className="btn btn-outline-secondary"
+    type="button"
+    onClick={findByZip}
+> Search </button>
 ```
 
-Then we have this next section which is the search by zip is going to be just like the one we just saw for name but it's going to be for the zip so someone can change the search dip and they click the button it's going to find my zip.
+Then we have this next section which is the *search by zip -- placeholder="Search by zip", is going to be just like the one we just saw for name, but it's going to be for the zip. So someone can onChangeSearchZip and they click the button it's going to find my zip.*
 
 And then the final one is going to be a little different it's going to be a drop down menu for the cuisines we're going to see all this in just a second on the page but we're going to select unchange so onChange it's going to do onChange search cuisine it's going to set the cuisine variable to the cuisine that the person selected and to get the cuisines in the list we're going to use this react function this map function cuisines remember cuisines is the list of cuisines and we're going to map it and for each cuisine in that array we're going to return an option for the select box and the value is going to be the cuisine and then the reason why it's substring 0 20 because some cuisines are very very long and we want to make sure the search box isn't too long so we're going to just have it just the first 20 characters or is that 21 characters just the first little bit of the cuisine and so people and search the cuisine and they click the button it'll find my cuisine okay now the next section is we have another row here a row is from bootstrap and we're going to use another map function to map through the restaurants array we're in react this curly braces means that it's going to be some sort of javascript code and for each restaurant we're going to first get the address so we're going to be putting the address of each restaurant and the address in the database is actually three different fields we have the building which is like the number then we have the street then we have the zip code so we're just going to put that on to one string that we can use and so for each restaurant we're returning this whole thing right here which again is directly from bootstrap and there are different cards and each card is going to have the name of the restaurant the cuisine the address and then there is going to be a link to view reviews and if you click this rank link it's going to go to this new route ralph restaurant slash and then it's going to have the restaurant id and then also there's going to be a link here to link to google maps so the reason why we have one of the reasons we got this variable up here so we can use it both here and we can use it for this link to google maps so it's going to use this link from google maps and it's just going to put the address on the end which is actually going to create a link to a google maps of that exact address and then we have a bunch of classes from bootstraps and it's going to be called view map et's test this out and see what it looks like i'm going to save this okay and here's our page so here are the three different search boxes i was talking about and here we can select a cuisine if we want and you can see it's cut off like we mentioned but most of the cuisines are are less than those characters and then we can see all the restaurants and it cuts off at 20. so we can search by cuisine if i click search here now it's just going to show the african cuisine restaurants or i can search by name and put food click search and now all the restaurants have the word food in them or i can search by zip code let's do one zero zero one four and click search and now all the restaurants have the zip code of one zero zero one four and if i click on view map let's see what opens here the google map opens if i zoom in let's see if it even shows the name of that restaurant i zoom in look it says one if by land two if by sea right there and that is actually the name of the restaurant from our database one if by land 2 if by c
 99:26
