@@ -865,23 +865,7 @@ So, one of the reasons we got the *(const address) variable up there, is to use 
 
 Let's test this out and see what it looks like. I'm going to save this okay and here's our page. So here are the three different search boxes i was talking about and here we can select a cuisine if we want and you can see it's cut off like we mentioned but most of the cuisines are are less than those characters and then we can see all the restaurants and it cuts off at 20.
 
-so we can search by cuisine if i click search here now it's just going to show the african cuisine restaurants or i can search by name and put food click search and now all the restaurants have the word food in them or i can search by zip code let's do one zero zero one four and click search and now all the restaurants have the zip code of one zero zero one four and if i click on view map let's see what opens here the google map opens if i zoom in let's see if it even shows the name of that restaurant i zoom in look it says one if by land two if by sea right there and that is actually the name of the restaurant from our database one if by land 2 if by c
-99:26
-so that actually took us to the map
-99:30
-so let's say we want to go back to all
-99:32
-cuisines
-99:33
-and all cuisines is also means that
-99:37
-you can only search for one thing at a
-99:38
-time so if i click all cuisines it's
-99:40
-going to go back to every restaurant
-99:43
-another thing really quick right now i
+so we can search by cuisine if i click search here now it's just going to show the african cuisine restaurants or i can search by name and put food click search and now all the restaurants have the word food in them or i can search by zip code let's do one zero zero one four and click search and now all the restaurants have the zip code of one zero zero one four and if i click on view map let's see what opens here the google map opens if i zoom in let's see if it even shows the name of that restaurant i zoom in look it says one if by land two if by sea right there and that is actually the name of the restaurant from our database one if by land 2 if by c so that actually took us to the map so let's say we want to go back to all cuisines and all cuisines is also means that you can only search for one thing at a time so if i click all cuisines it's going to go back to every restaurant another thing really quick right now i
 99:45
 do not have any pagination and i don't
 99:47
