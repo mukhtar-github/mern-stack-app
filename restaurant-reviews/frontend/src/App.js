@@ -32,6 +32,7 @@ function App() {
           </li>
           <li className="nav-item" >
             { user ? (
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a onClick={logout} className="nav-link" style={{cursor:'pointer'}}>
                 Logout {user.name}
               </a>
