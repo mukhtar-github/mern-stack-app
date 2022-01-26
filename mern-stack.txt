@@ -96,3 +96,19 @@ To recap some stuff other commentators pointed out:
 - In the render part of each component, just rewrite the code all together.
 The components need to be like <Login login={login} /> .
 The video and git are missing the <> and use generic (...props) that does not work (for me).
+
+**at 1:38:13 I am not able to see restaurants cards. can anyone help?
+-app.use(cors()) enable this at server.js in the backend.
+-I got the same errorand I solved doing the following:
+In the src/http-common.js I wrote this:
+import axios from 'axios';
+export default axios.create({
+    baseURL:"http://localhost:5000/api/v1/",
+    headers:{
+        "Content-type": "application/json"
+    }
+});
+In the last method named 'getCuisines(id){}' into services/restaurant.js I wrote this:
+getCuisines(id) {
+        return http.get(`restaurants/cuisines`);
+}
