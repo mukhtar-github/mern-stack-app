@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import RestaurantDataService from "../services/restaurant";
 import { Link } from "react-router-dom";
