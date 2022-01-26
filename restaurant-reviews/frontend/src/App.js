@@ -1,5 +1,10 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddReview from "./components/add-review";
@@ -47,7 +52,8 @@ function App() {
       </nav>
 
       <div className="container mt-3">
-        <Switch>
+      <BrowserRouter>
+      <Routes>
           <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
           <Route 
             path="/restaurants/:id/review"
@@ -67,10 +73,10 @@ function App() {
               <Login {...props} login={login} />
             )}
           />
-        </Switch>
+        </Routes>
+     </BrowserRouter>
       </div>
     </div>
   );
 }
-
 export default App;
