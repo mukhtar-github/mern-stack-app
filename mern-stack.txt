@@ -101,7 +101,7 @@ The video and git are missing the <> and use generic (...props) that does not wo
 
 **at 1:38:13 I am not able to see restaurants cards. can anyone help?
 -app.use(cors()) enable this at server.js in the backend.
--I got the same errorand I solved doing the following:
+-I got the same error and I solved doing the following:
 In the src/http-common.js I wrote this:
 import axios from 'axios';
 export default axios.create({
