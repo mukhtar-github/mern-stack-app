@@ -81,4 +81,18 @@ I hope this helps. I spent too much time on this tutorial because of many errors
 You can use this method to fix the other route/s too.
 
 **2:43:11 if anyone getting error (Message: The specified key does not exist.) 404 not found,
-after hosting, then go to hosting setting and set Single-Page Application entrypoint as index.html .
+after hosting, then go to hosting setting and set Single-Page Application entrypoint as index.html.
+
+**Took about an extra 2 hours to debug the first 2 hours of video. Thanks to the comments, got some solutions quick.
+The ones i missed in comments were:
+- The baseURL should not contain "restaurants" after v1, as it's also designated in the react-router-dom paths.
+So you get endpoints like "v1/restaurants/restaurants..."
+- For some reason, I had to change from localhost:5000 to another number.
+[I tried killing nodes with "pkill -f node" and restarting, but only changing localhost number worked. 
+
+To recap some stuff other commentators pointed out:
+- Update node and npm to latest versions. 
+- Make sure you install some dependencies like react-router-dom on FE
+- In the render part of each component, just rewrite the code all together.
+The components need to be like <Login login={login} /> .
+The video and git are missing the <> and use generic (...props) that does not work (for me).
