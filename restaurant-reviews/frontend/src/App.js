@@ -50,7 +50,7 @@ function App() {
       </nav>
 
       <div className="container mt-3">
-      <Router>
+      <Router basename={process.env.RESTREVIEWS_DB_URI}>
       <Routes>
           <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
           <Route 
