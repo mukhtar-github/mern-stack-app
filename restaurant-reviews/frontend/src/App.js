@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import { Router, Routes, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 
 import AddReview from "./components/add-review";
@@ -50,28 +45,12 @@ function App() {
       </nav>
 
       <div className="container mt-3">
-      <Router basename={process.env.RESTREVIEWS_DB_URI}>
+      <Router>
       <Routes>
-          <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
-          <Route 
-            path="/restaurants/:id/review"
-            render={(props) => (
-              <AddReview {...props} user={user} />
-            )}
-          />
-          <Route 
-            path="/restaurants/:id"
-            render={(props) => (
-              <Restaurant {...props} user={user} />
-            )}
-          />
-          <Route 
-            path="/login"
-            render={(props) => (
-              <Login {...props} login={login} />
-            )}
-            element = { <Login login={login} /> }
-          />
+          <Route path={["/", "/restaurants"]} element={<RestaurantsList />} />
+          <Route path="/restaurants/:id/review" element = { <AddReview user={user} /> } />
+          <Route path="/restaurants/:id" element={<Restaurant user={user} />} />
+          <Route path="/login" element = { <Login login={login} /> } />
         </Routes>
      </Router>
       </div>
