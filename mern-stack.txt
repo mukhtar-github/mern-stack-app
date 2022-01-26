@@ -31,7 +31,7 @@ npm uninstall react-router-dom
 npm install react-router-dom@5.2.0
 
 
-For anyone late to the party, I had a hell of a time getting bootstrap to align the search sections
+**For anyone late to the party, I had a hell of a time getting bootstrap to align the search sections
 properly at about 1:39:00. I found that it fills the space to fit the restaurant columns if you set
 the input-group divs to just "col-lg" and then add "col" to the "select" item for the dropdown.
 Only as I'm writing this do I realize that he also didn't align his dropdown tab, haha. 
@@ -46,3 +46,36 @@ className="col"
 Making the select bar a single column tells it to fill the available space, but it gets all wonky if you
 don't also remove the "4" from the sizing of the input groups. Still not entirely sure why.
 Feedback on if I'm mistaken would be appreciated.
+
+**Such libraries are created for a reason... your code for connecting to a database and querying it,
+is considerably more complicated and less maintainable than code that uses the Mongoose library.
+
+** render={(props) => (
+    <Login {...props} login={login} />
+)}
+
+needs to be changed to
+
+element = { <Login login={login} /> } and it can now render correctly.
+There are also the other two similar render things that will need to be changed.
+
+**I had the same problem. I fixed mine by making sure that the react-router-dom dependency
+is installed in my frontend folder.
+
+**Route render just won't work for me. So I used useParams() instead. Go to your restaurant file
+and add the dependency of useParams from the react-router-dom. After that in the Restaurant
+function call a new variable:
+
+let {id} = useParams()
+
+After that change every props.match.params.id with just id.
+
+And finally at app.js change the route element for the path with "/restaurants/:id"  into:
+
+<Route
+    path="/restaurants/:id"
+    element={<Restaurant user={user}/>}
+/> 
+
+I hope this helps. I spent too much time on this tutorial because of many errors like this.
+You can use this method to fix the other route/s too.
