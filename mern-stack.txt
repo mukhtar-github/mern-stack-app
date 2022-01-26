@@ -56,7 +56,7 @@ is considerably more complicated and less maintainable than code that uses the M
     <Login {...props} login={login} />
 )}
 
-needs to be changed to
+needs to be changed to in App.js file
 
 element = { <Login login={login} /> } and it can now render correctly.
 There are also the other two similar render things that will need to be changed.
