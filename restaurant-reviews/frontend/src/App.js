@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  BrowserRouter,
-  Routes,
+  BrowserRouter as Router,
+  Switch,
   Route,
   Link
 } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurants";
@@ -37,7 +37,6 @@ function App() {
           </li>
           <li className="nav-item" >
             { user ? (
-              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a onClick={logout} className="nav-link" style={{cursor:'pointer'}}>
                 Logout {user.name}
               </a>
@@ -46,14 +45,13 @@ function App() {
               Login
             </Link>
             )}
-
           </li>
         </div>
       </nav>
 
       <div className="container mt-3">
-      <BrowserRouter>
-      <Routes>
+      <Router>
+      <Switch>
           <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
           <Route 
             path="/restaurants/:id/review"
@@ -74,8 +72,8 @@ function App() {
             )}
             element = { <Login login={login} /> }
           />
-        </Routes>
-     </BrowserRouter>
+        </Switch>
+     </Router>
       </div>
     </div>
   );
