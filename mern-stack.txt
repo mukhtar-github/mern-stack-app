@@ -29,6 +29,8 @@ http://localhost:6000/api/v1/restaurants //output - Hello World
 
 npm uninstall react-router-dom
 npm install react-router-dom@5.2.0
+npm uninstall bootstrap
+npm install bootstrap
 
 
 **For anyone late to the party, I had a hell of a time getting bootstrap to align the search sections
