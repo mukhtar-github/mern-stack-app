@@ -29,3 +29,20 @@ http://localhost:6000/api/v1/restaurants //output - Hello World
 
 npm uninstall react-router-dom
 npm install react-router-dom@5.2.0
+
+
+For anyone late to the party, I had a hell of a time getting bootstrap to align the search sections
+properly at about 1:39:00. I found that it fills the space to fit the restaurant columns if you set
+the input-group divs to just "col-lg" and then add "col" to the "select" item for the dropdown.
+Only as I'm writing this do I realize that he also didn't align his dropdown tab, haha. 
+
+Either way, it's something like:
+className="input-group col-lg"
+className="input-group col-lg"
+className="input-group col-lg"
+className="col"
+
+
+Making the select bar a single column tells it to fill the available space, but it gets all wonky if you
+don't also remove the "4" from the sizing of the input groups. Still not entirely sure why.
+Feedback on if I'm mistaken would be appreciated.
