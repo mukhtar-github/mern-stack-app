@@ -79,3 +79,6 @@ And finally at app.js change the route element for the path with "/restaurants/:
 
 I hope this helps. I spent too much time on this tutorial because of many errors like this.
 You can use this method to fix the other route/s too.
+
+**2:43:11 if anyone getting error (Message: The specified key does not exist.) 404 not found,
+after hosting, then go to hosting setting and set Single-Page Application entrypoint as index.html .
