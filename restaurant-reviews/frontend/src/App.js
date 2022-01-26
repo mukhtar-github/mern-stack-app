@@ -72,6 +72,7 @@ function App() {
             render={(props) => (
               <Login {...props} login={login} />
             )}
+            element = { <Login login={login} /> }
           />
         </Routes>
      </BrowserRouter>
