@@ -1,7 +1,7 @@
 import React from "react";
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -51,7 +51,7 @@ function App() {
 
       <div className="container mt-3">
       <Router>
-      <Switch>
+      <Routes>
           <Route exact path={["/", "/restaurants"]} component={RestaurantsList} />
           <Route 
             path="/restaurants/:id/review"
@@ -72,7 +72,7 @@ function App() {
             )}
             element = { <Login login={login} /> }
           />
-        </Switch>
+        </Routes>
      </Router>
       </div>
     </div>
