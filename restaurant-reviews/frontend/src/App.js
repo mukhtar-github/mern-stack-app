@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 
 import AddReview from "./components/add-review";
@@ -20,7 +22,7 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/restaurants">Restaurant Reviews</Navbar.Brand>
@@ -38,7 +40,7 @@ function App() {
           <Route path="/restaurants/:id" element={ <Restaurant user={user} /> } />
           <Route path="/login" element = { <Login login={login} /> } />
         </Routes>
-    </>
+    </div>
   );
 }
 export default App;
