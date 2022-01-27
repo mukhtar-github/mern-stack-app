@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
+import Navbar from 'react-bootstrap/Navbar';
+
 
 import AddReview from "./components/add-review";
 import Restaurant from "./components/restaurants";
@@ -19,8 +20,29 @@ function App() {
   }
 
   return (
-    <div>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="/restaurants">Restaurant Reviews</Navbar.Brand>
+          <Nav className="me-auto">
+          <Nav.Link href="/restaurants">Restaurants</Nav.Link>
+          <Nav.Link href="/login">Login</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      
+
+      <Routes>
+          <Route path={["/", "/restaurants"]} element={<RestaurantsList /> } />
+          <Route path="/restaurants/:id/review" element = { <AddReview user={user} /> } />
+          <Route path="/restaurants/:id" element={ <Restaurant user={user} /> } />
+          <Route path="/login" element = { <Login login={login} /> } />
+        </Routes>
+    </>
+  );
+}
+export default App;
+<nav className="navbar navbar-expand navbar-dark bg-dark">
         <a href="/restaurants" className="navbar-brand">
           Restaurant Reviews
         </a>
@@ -43,16 +65,3 @@ function App() {
           </li>
         </div>
       </nav>
-
-      <div className="container mt-3">
-      <Routes>
-          <Route path={["/", "/restaurants"]} element={<RestaurantsList /> } />
-          <Route path="/restaurants/:id/review" element = { <AddReview user={user} /> } />
-          <Route path="/restaurants/:id" element={ <Restaurant user={user} /> } />
-          <Route path="/login" element = { <Login login={login} /> } />
-        </Routes>
-      </div>
-    </div>
-  );
-}
-export default App;
