@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 
 
 class NavigationBar extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
   render() {
     const isLoggedin = this.props.isLoggedin
@@ -17,14 +16,15 @@ class NavigationBar extends React.Component {
         <Navbar.Brand >hello</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link><Link to='/'>Login</Link></Nav.Link>
-            <Nav.Link><Link to='/register'>Register</Link></Nav.Link>
-          </Nav>
+            <Nav className="ml-auto">
+                {isLoggedin && (<Nav.Link><Link to='/logout'>Logout</Link></Nav.Link>)}
+                {!isLoggedin && (<Nav.Link><Link to='/'>Login</Link></Nav.Link>)}
+                {!isLoggedin && (<Nav.Link><Link to='/register'>Register</Link></Nav.Link>)}
+            </Nav>
         </Navbar.Collapse>
       </Navbar>
     )
   }
 }
 
-export default NavigationBar
+export default NavigationBar;

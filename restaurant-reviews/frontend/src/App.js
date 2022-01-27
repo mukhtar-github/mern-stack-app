@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Button, Navbar, Nav, NavItem, NavDropdown, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,16 +11,15 @@ import RestaurantsList from "./components/restaurants-list";
 import Login from "./components/login";
 
 function App() {
-  const [user, setUser] = React.useState(null);
+  const isAuthenticated = Auth.isAuthenticated();
 
-  async function login(user = null) {
-    setUser(user);
-  }
+    login = () => {
+      setState({ isAuthenticated: true });
+    }
 
-  async function logout() {
-    setUser(null)
-  }
-
+    logout = () => {
+      setState({ isAuthenticated: false });
+    }
   return (
     <div>
       <Navbar bg="dark" variant="dark">
