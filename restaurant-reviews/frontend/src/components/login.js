@@ -4,7 +4,7 @@ function Login() {
   
   return (
     <div className='App'>
-      Hello World!
+      Login
     </div>
   )
 }

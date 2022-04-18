@@ -1,6 +1,6 @@
 import React from "react";
 
-function Restaurants() {
+function Restaurant() {
   
   return (
     <div className='App'>
@@ -9,4 +9,4 @@ function Restaurants() {
   )
 }
 
-export default Restaurants;
+export default Restaurant;
