@@ -9,6 +9,7 @@ import Login from "./components/login";
 
 
 function App() {
+  const [user, setUser] = React.useState(null);
   
   return (
     <div>
