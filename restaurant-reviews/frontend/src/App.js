@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import { Button, Navbar, Nav, NavItem, NavDropdown, Container } from 'react-bootstrap';
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
